@@ -12,13 +12,12 @@ const b7 = document.querySelector("#b7");
 let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = new Array(); //USERINPUT
 
-
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
         audio.play();
     b1.onclick = function(){
         b.push("b1");
-        console.log("",b,"");
+        alert(b);
     }});
 
 
@@ -27,7 +26,7 @@ b2.addEventListener('click', (event) => {
         audio.play();
     b2.onclick = function(){
         b.push("b2");
-        console.log("",b,"");
+        alert(b);
     }});
 
 b3.addEventListener('click', (event) => {
@@ -35,7 +34,7 @@ b3.addEventListener('click', (event) => {
         audio.play();
     b3.onclick = function(){
         b.push("b3");
-        console.log("",b,"");
+        alert(b);
     }});
 
 b4.addEventListener('click', (event) => {
@@ -43,7 +42,7 @@ b4.addEventListener('click', (event) => {
         audio.play();
     b4.onclick = function(){
         b.push("b4");
-        console.log("",b,"");
+        alert(b);
     }});
 
 b5.addEventListener('click', (event) => {
@@ -51,7 +50,7 @@ b5.addEventListener('click', (event) => {
         audio.play();
     b5.onclick = function(){
         b.push("b5");
-        console.log("",b,"");
+        alert(b);
     }});
 
 b6.addEventListener('click', (event) => {
@@ -59,7 +58,7 @@ b6.addEventListener('click', (event) => {
         audio.play();
     b6.onclick = function(){
         b.push("b6");
-        console.log("",b,"");
+        alert(b);
     }});
 
 b7.addEventListener('click', (event) => {
@@ -67,13 +66,13 @@ b7.addEventListener('click', (event) => {
         audio.play();
     b7.onclick = function(){
         b.push("b7");
-        console.log("",b,"");
+        alert(b);
     }});
 
 reset.addEventListener('click', (event) => {
     reset.onclick = function(){
         b = [];
-        console.log("",b,"");
+        alert(b);
     }});
 
 
