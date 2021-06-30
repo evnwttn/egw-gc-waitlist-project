@@ -1,0 +1,48 @@
+/* 
+COLOUR PALETTE
+
+#E3E3E3 - OFF WHITE
+#9C9C9C - SILVER
+#636363 - DARK SILVER
+#2E2E2E - GREY
+#1A1A1A - DARK GREY
+#0D0D0D - OFF BLACK
+
+*/
+
+html { 
+    background-color: #0D0D0D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body {
+    font-family: 'Yrsa', serif;
+}
+
+#container {
+	width: 72%;
+	margin: auto;
+	margin-top: 120px;
+    }
+
+p {
+    color: #E3E3E3;
+}
+
+p2 {
+    color: #9C9C9C;
+}
+
+#game {
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.inline-block {
+    display: inline-block;
+ }
+
