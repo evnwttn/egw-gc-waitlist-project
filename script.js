@@ -28,6 +28,7 @@ b2.addEventListener('click', (event) => {
     b2.onclick = function(){
         b.push("b2");
         alert(b);
+        compareArrays(a,b);
     }});
 
 b3.addEventListener('click', (event) => {
@@ -36,6 +37,7 @@ b3.addEventListener('click', (event) => {
     b3.onclick = function(){
         b.push("b3");
         alert(b);
+        compareArrays(a,b);
     }});
 
 b4.addEventListener('click', (event) => {
@@ -44,6 +46,7 @@ b4.addEventListener('click', (event) => {
     b4.onclick = function(){
         b.push("b4");
         alert(b);
+        compareArrays(a,b);
     }});
 
 b5.addEventListener('click', (event) => {
@@ -52,6 +55,7 @@ b5.addEventListener('click', (event) => {
     b5.onclick = function(){
         b.push("b5");
         alert(b);
+        compareArrays(a,b);
     }});
 
 b6.addEventListener('click', (event) => {
@@ -60,6 +64,7 @@ b6.addEventListener('click', (event) => {
     b6.onclick = function(){
         b.push("b6");
         alert(b);
+        compareArrays(a,b);
     }});
 
 b7.addEventListener('click', (event) => {
@@ -68,12 +73,14 @@ b7.addEventListener('click', (event) => {
     b7.onclick = function(){
         b.push("b7");
         alert(b);
+        compareArrays(a,b);
     }});
 
 reset.addEventListener('click', (event) => {
     reset.onclick = function(){
         b = [];
         alert(b);
+        compareArrays(a,b);
     }});
 
 }
@@ -124,9 +131,6 @@ function compareArrays (a,b) {
         } else {
             alert("NOT YET!");
         }
-    }
-    
-    } 
-}
+    }}}
 
 startGame();
