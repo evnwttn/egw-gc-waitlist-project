@@ -98,6 +98,7 @@ function compareArrays (a,b) {
         && b[4] === a[4]
         && b[5] === a[5]
         && b[6] === a[6]) {
+            result = true;
             winGame();
         } else {
             continue;
@@ -105,7 +106,7 @@ function compareArrays (a,b) {
     }}}
 
 function winGame() {
-    alert("You win!");  
+    alert("You win!"),  
     document.getElementById("game").innerHTML = "-";
 }
 
