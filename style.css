@@ -53,3 +53,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+#reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

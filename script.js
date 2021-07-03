@@ -105,9 +105,9 @@ function compareArrays (a,b) {
         }
     }}}
 
-function winGame() {
-    alert("You win!"),  
+function winGame() {  
     document.getElementById("game").innerHTML = "";
+    document.getElementById("countdown").innerHTML = "";
 }
 
 function loseGame() {
@@ -115,16 +115,20 @@ function loseGame() {
     timeH.innerHTML = "X";
 }
 
-startGame();
-
 const timeH = document.querySelector("h1");
-let timeSecond = 59;
+let timeSecond = 22;
 
 timeH.innerHTML = `${timeSecond}`;
     
 const countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
-    if(timeSecond <= 0 || timeSecond < 1){
+    if(timeSecond <= 0 || timeSecond < 1) {
         loseGame();
+        if (timeSecond <= 20) {
+            clockColor = document.getElementById("countdown");
+            div.style.color = "orange";
+        }
     }},1000)
+
+startGame();
