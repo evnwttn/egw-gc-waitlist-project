@@ -46,3 +46,10 @@ p2 {
     display: inline-block;
  }
 
+h1 {
+    color: #636363;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

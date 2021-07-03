@@ -107,8 +107,24 @@ function compareArrays (a,b) {
 
 function winGame() {
     alert("You win!"),  
-    document.getElementById("game").innerHTML = "-";
+    document.getElementById("game").innerHTML = "";
 }
 
+function loseGame() {
+    document.getElementById("game").innerHTML = "";
+    timeH.innerHTML = "X";
+}
 
 startGame();
+
+const timeH = document.querySelector("h1");
+let timeSecond = 59;
+
+timeH.innerHTML = `${timeSecond}`;
+    
+const countDown = setInterval (()=>{
+    timeSecond--;
+    timeH.innerHTML = `${timeSecond}`;
+    if(timeSecond <= 0 || timeSecond < 1){
+        loseGame();
+    }},1000)
