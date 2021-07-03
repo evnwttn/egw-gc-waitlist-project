@@ -121,6 +121,7 @@ function compareArrays (a,b) {
 function winGame() {  
     document.getElementById("game").innerHTML = "";
     document.getElementById("countdown").innerHTML = "";
+    document.getElementById("reset").innerHTML = "";
     document.getElementById("pup").style.visibility = "visible";
     }
 ;

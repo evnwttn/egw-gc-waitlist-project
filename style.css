@@ -39,11 +39,15 @@ p2 {
 #game {
     margin: auto;
     margin-top: 50px;
-    width: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inline-block {
     display: inline-block;
+
  }
 
 h1 {
@@ -55,7 +59,7 @@ h1 {
 }
 
 #reset {
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
