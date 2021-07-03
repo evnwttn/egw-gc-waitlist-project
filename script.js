@@ -121,7 +121,9 @@ function compareArrays (a,b) {
 function winGame() {  
     document.getElementById("game").innerHTML = "";
     document.getElementById("countdown").innerHTML = "";
-}
+    document.getElementById("pup").style.visibility = "visible";
+    }
+;
 
 function loseGame() {
     document.getElementById("game").innerHTML = "";
@@ -129,7 +131,7 @@ function loseGame() {
 }
 
 const timeH = document.querySelector("h1");
-let timeSecond = 22;
+let timeSecond = 30;
 
 timeH.innerHTML = `${timeSecond}`;
     
@@ -141,3 +143,6 @@ const countDown = setInterval (()=>{
     }},1000)
 
 startGame();
+
+
+
