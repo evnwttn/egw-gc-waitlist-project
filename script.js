@@ -85,35 +85,6 @@ reset.addEventListener('click', (event) => {
 
 }
 
-    // if (a[0] === b[0] 
-    //     && a[1] === b[1] 
-    //     && a[2] === b[2] 
-    //     && a[3] === b[3]
-    //     && a[4] === b[4]
-    //     && a[5] === b[5]
-    //     && a[6] === a[6]) {
-    //         alert("you win");
-    //     } else {
-    //         alert("not yet");
-    //     }
-
-// function compareArrays (a, b) {
-//     if (b.length != a.length) {
-//         return false;
-//     } else {
-//         let result = false;
-//         for (let i=0; i<a.length; i++) {
-//             if (a[i] != b[i]) {
-//                 return false;
-//             } else {
-//                 result = true;
-//                 alert("true");
-//             }
-//         }
-//         return result;
-//     } 
-// }
-
 function compareArrays (a,b) {
     if (b.length != a.length) {
         return false;
@@ -127,10 +98,16 @@ function compareArrays (a,b) {
         && b[4] === a[4]
         && b[5] === a[5]
         && b[6] === a[6]) {
-            alert("YOU WIN!");
+            winGame();
         } else {
-            alert("NOT YET!");
+            continue;
         }
     }}}
+
+function winGame() {
+    alert("You win!");  
+    document.getElementById("game").innerHTML = "-";
+}
+
 
 startGame();
