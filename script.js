@@ -19,7 +19,9 @@ b1.addEventListener('click', (event) => {
         b.push("b1");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 
 b2.addEventListener('click', (event) => {
@@ -29,7 +31,9 @@ b2.addEventListener('click', (event) => {
         b.push("b2");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 b3.addEventListener('click', (event) => {
     let audio = document.getElementById("fx3");
@@ -38,7 +42,9 @@ b3.addEventListener('click', (event) => {
         b.push("b3");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 b4.addEventListener('click', (event) => {
     let audio = document.getElementById("fx4");
@@ -47,7 +53,9 @@ b4.addEventListener('click', (event) => {
         b.push("b4");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 b5.addEventListener('click', (event) => {
     let audio = document.getElementById("fx5");
@@ -56,7 +64,9 @@ b5.addEventListener('click', (event) => {
         b.push("b5");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 b6.addEventListener('click', (event) => {
     let audio = document.getElementById("fx6");
@@ -65,7 +75,9 @@ b6.addEventListener('click', (event) => {
         b.push("b6");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 b7.addEventListener('click', (event) => {
     let audio = document.getElementById("fx7");
@@ -74,13 +86,14 @@ b7.addEventListener('click', (event) => {
         b.push("b7");
         alert(b);
         compareArrays(a,b);
-    }});
+        if (b.length >= 7) {
+            b = [];
+        }}});
 
 reset.addEventListener('click', (event) => {
     reset.onclick = function(){
         b = [];
         alert(b);
-        compareArrays(a,b);
     }});
 
 }
@@ -125,10 +138,6 @@ const countDown = setInterval (()=>{
     timeH.innerHTML = `${timeSecond}`;
     if(timeSecond <= 0 || timeSecond < 1) {
         loseGame();
-        if (timeSecond <= 20) {
-            clockColor = document.getElementById("countdown");
-            div.style.color = "orange";
-        }
     }},1000)
 
 startGame();
