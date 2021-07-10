@@ -148,7 +148,7 @@ function loseGame() {
 
 function startClock(){
 const timeH = document.querySelector("h1");
-let timeSecond = 3;
+let timeSecond = 30;
 
 timeH.innerHTML = `${timeSecond}`;
     
