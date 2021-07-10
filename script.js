@@ -140,7 +140,7 @@ function winGame() {
 
 function loseGame() {
     document.getElementById("game").innerHTML = "";
-    timeH.innerHTML = "X";
+    document.getElementById("countdown").innerHTML = "";
     document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
@@ -148,7 +148,7 @@ function loseGame() {
 
 function startClock(){
 const timeH = document.querySelector("h1");
-let timeSecond = 30;
+let timeSecond = 3;
 
 timeH.innerHTML = `${timeSecond}`;
     
