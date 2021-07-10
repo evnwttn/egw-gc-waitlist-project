@@ -1,3 +1,10 @@
+const splash = document.querySelector(".splash");
+
+splash.addEventListener('click', (event) => {
+    splash.classList.add("display-none");
+})
+
+
 function startGame(){
 
 const reset = document.querySelector("#reset");
@@ -8,8 +15,6 @@ const b4 = document.querySelector("#b4");
 const b5 = document.querySelector("#b5");
 const b6 = document.querySelector("#b6");
 const b7 = document.querySelector("#b7");
-const start = document.querySelector("start");
-
 
 let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
@@ -101,17 +106,7 @@ reset.addEventListener('click', (event) => {
 
 }
 
-start.addEventListener('click', (event)=> {
-    start.onclick = startButton();   
-})
-
 // GAME MECHANICS
-
-function startButton(){
-    document.getElementById("game").style.visibility = "visible";
-    document.getElementById("countdown").style.visibility = "visible";
-    document.getElementById("reset").style.visibility = "visible";
-};
 
 function compareArrays (a,b) {
     if (b.length != a.length) {
