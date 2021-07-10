@@ -2,6 +2,8 @@ const splash = document.querySelector(".splash");
 
 splash.addEventListener('click', (event) => {
     splash.classList.add("display-none");
+    startClock();
+    startGame();
 })
 
 
@@ -144,6 +146,7 @@ function loseGame() {
 
 // COUNTDOWN TIMER
 
+function startClock(){
 const timeH = document.querySelector("h1");
 let timeSecond = 30;
 
@@ -155,8 +158,7 @@ const countDown = setInterval (()=>{
     if(timeSecond <= 0 || timeSecond < 1) {
         loseGame();
     }},1000)
-
-startGame();
+}
 
 
 
