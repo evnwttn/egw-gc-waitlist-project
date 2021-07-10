@@ -43,6 +43,7 @@ p2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 }
 
 .inline-block {
@@ -62,6 +63,7 @@ h1 {
     display: flex; 
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 }
 
 #pup {
@@ -74,5 +76,9 @@ h1 {
 }
 
 #gameover {
+    visibility: hidden;
+}
+
+#countdown {
     visibility: hidden;
 }

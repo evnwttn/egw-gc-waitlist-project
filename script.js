@@ -8,6 +8,7 @@ const b4 = document.querySelector("#b4");
 const b5 = document.querySelector("#b5");
 const b6 = document.querySelector("#b6");
 const b7 = document.querySelector("#b7");
+const start = document.querySelector("start");
 
 
 let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
@@ -100,7 +101,17 @@ reset.addEventListener('click', (event) => {
 
 }
 
+start.addEventListener('click', (event)=> {
+    start.onclick = startButton();   
+})
+
 // GAME MECHANICS
+
+function startButton(){
+    document.getElementById("game").style.visibility = "visible";
+    document.getElementById("countdown").style.visibility = "visible";
+    document.getElementById("reset").style.visibility = "visible";
+};
 
 function compareArrays (a,b) {
     if (b.length != a.length) {
@@ -133,13 +144,13 @@ function winGame() {
 function loseGame() {
     document.getElementById("game").innerHTML = "";
     timeH.innerHTML = "X";
-    document.getElementById("gameover").style.visibility = "visible";
+    document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
 // COUNTDOWN TIMER
 
 const timeH = document.querySelector("h1");
-let timeSecond = 3;
+let timeSecond = 30;
 
 timeH.innerHTML = `${timeSecond}`;
     
