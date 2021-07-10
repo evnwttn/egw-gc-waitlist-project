@@ -9,8 +9,11 @@ const b5 = document.querySelector("#b5");
 const b6 = document.querySelector("#b6");
 const b7 = document.querySelector("#b7");
 
+
 let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
+
+// BUTTON FUNCTIONS //
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
@@ -22,7 +25,6 @@ b1.addEventListener('click', (event) => {
         if (b.length >= 7) {
             b = [];
         }}});
-
 
 b2.addEventListener('click', (event) => {
     let audio = document.getElementById("fx2");
@@ -93,10 +95,12 @@ b7.addEventListener('click', (event) => {
 reset.addEventListener('click', (event) => {
     reset.onclick = function(){
         b = [];
-        alert(b);
+        location.reload();
     }});
 
 }
+
+// GAME MECHANICS
 
 function compareArrays (a,b) {
     if (b.length != a.length) {
@@ -129,10 +133,13 @@ function winGame() {
 function loseGame() {
     document.getElementById("game").innerHTML = "";
     timeH.innerHTML = "X";
+    document.getElementById("gameover").style.visibility = "visible";
 }
 
+// COUNTDOWN TIMER
+
 const timeH = document.querySelector("h1");
-let timeSecond = 30;
+let timeSecond = 3;
 
 timeH.innerHTML = `${timeSecond}`;
     
@@ -144,6 +151,8 @@ const countDown = setInterval (()=>{
     }},1000)
 
 startGame();
+
+
 
 
 
