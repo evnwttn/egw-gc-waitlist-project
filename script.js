@@ -27,11 +27,12 @@ b1.addEventListener('click', (event) => {
         audio.play();
     b1.onclick = function(){
         b.push("b1");
+        b1.classList.remove("b1");
+        b1.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
-            button.classList.add("out");
         }}});
 
 b2.addEventListener('click', (event) => {
@@ -39,6 +40,8 @@ b2.addEventListener('click', (event) => {
         audio.play();
     b2.onclick = function(){
         b.push("b2");
+        b2.classList.remove("b2");
+        b2.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -50,6 +53,8 @@ b3.addEventListener('click', (event) => {
         audio.play();
     b3.onclick = function(){
         b.push("b3");
+        b3.classList.remove("b3");
+        b3.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -61,6 +66,8 @@ b4.addEventListener('click', (event) => {
         audio.play();
     b4.onclick = function(){
         b.push("b4");
+        b4.classList.remove("b4");
+        b4.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -72,6 +79,8 @@ b5.addEventListener('click', (event) => {
         audio.play();
     b5.onclick = function(){
         b.push("b5");
+        b5.classList.remove("b5");
+        b5.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -83,6 +92,8 @@ b6.addEventListener('click', (event) => {
         audio.play();
     b6.onclick = function(){
         b.push("b6");
+        b6.classList.remove("b6");
+        b6.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -94,6 +105,8 @@ b7.addEventListener('click', (event) => {
         audio.play();
     b7.onclick = function(){
         b.push("b7");
+        b7.classList.remove("b7");
+        b7.classList.add("b-clicked");
         alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
@@ -159,8 +172,4 @@ const countDown = setInterval (()=>{
         loseGame();
     }},1000)
 }
-
-
-
-
 
