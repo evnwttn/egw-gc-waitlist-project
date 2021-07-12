@@ -119,9 +119,11 @@ reset.addEventListener('click', (event) => {
 function compareArrays (a,b) {
     if (b.length != a.length) {
         return false;
+    } else if (b.length >= a.length) {
+        loseGame();
     } else {
         let result = false;
-    for (let i=0; i<a.length; i++) {
+        for (let i=0; i<a.length; i++) {
         if (b[0] === a[0]
         && b[1] === a[1]
         && b[2] === a[2]
@@ -146,8 +148,8 @@ function winGame() {
 ;
 
 function loseGame() {
-    document.getElementById("game").innerHTML = "";
-    document.getElementById("countdown").innerHTML = "";
+    document.getElementById("game").classList.add("b-clicked");
+    document.getElementById("countdown").classList.add("b-clicked");
     document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
