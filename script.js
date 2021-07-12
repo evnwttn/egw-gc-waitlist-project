@@ -6,7 +6,6 @@ splash.addEventListener('click', (event) => {
     startGame();
 })
 
-
 function startGame(){
 
 const reset = document.querySelector("#reset");
@@ -32,6 +31,7 @@ b1.addEventListener('click', (event) => {
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
+            button.classList.add("out");
         }}});
 
 b2.addEventListener('click', (event) => {
