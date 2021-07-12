@@ -117,12 +117,12 @@ reset.addEventListener('click', (event) => {
 // GAME MECHANICS
 
 function compareArrays (a,b) {
+    let result = false;
     if (b.length != a.length) {
         return false;
-    } else if (b.length >= a.length) {
+    } else if ((b.length >= a.length) || (result = false)) {
         loseGame();
     } else {
-        let result = false;
         for (let i=0; i<a.length; i++) {
         if (b[0] === a[0]
         && b[1] === a[1]
