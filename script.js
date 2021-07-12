@@ -29,7 +29,6 @@ b1.addEventListener('click', (event) => {
         b.push("b1");
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -42,7 +41,6 @@ b2.addEventListener('click', (event) => {
         b.push("b2");
         b2.classList.remove("b2");
         b2.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -55,7 +53,6 @@ b3.addEventListener('click', (event) => {
         b.push("b3");
         b3.classList.remove("b3");
         b3.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -68,7 +65,6 @@ b4.addEventListener('click', (event) => {
         b.push("b4");
         b4.classList.remove("b4");
         b4.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -81,7 +77,6 @@ b5.addEventListener('click', (event) => {
         b.push("b5");
         b5.classList.remove("b5");
         b5.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -94,7 +89,6 @@ b6.addEventListener('click', (event) => {
         b.push("b6");
         b6.classList.remove("b6");
         b6.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -107,7 +101,6 @@ b7.addEventListener('click', (event) => {
         b.push("b7");
         b7.classList.remove("b7");
         b7.classList.add("b-clicked");
-        alert(b);
         compareArrays(a,b);
         if (b.length >= 7) {
             b = [];
@@ -143,6 +136,7 @@ function compareArrays (a,b) {
         }
     }}}
 
+
 function winGame() {  
     document.getElementById("game").innerHTML = "";
     document.getElementById("countdown").innerHTML = "";
@@ -161,7 +155,7 @@ function loseGame() {
 
 function startClock(){
 const timeH = document.querySelector("h1");
-let timeSecond = 30;
+let timeSecond = 15;
 
 timeH.innerHTML = `${timeSecond}`;
     

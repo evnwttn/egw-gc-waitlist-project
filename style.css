@@ -124,7 +124,7 @@ h1 {
 
 .b-clicked {
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 .b1:hover {
