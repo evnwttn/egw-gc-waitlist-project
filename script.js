@@ -108,10 +108,14 @@ b7.addEventListener('click', (event) => {
 
 reset.addEventListener('click', (event) => {
     reset.onclick = function(){
-        b = [];
-        location.reload();
+        resetB ();
     }});
 
+}
+
+
+function resetB() {
+    
 }
 
 // GAME MECHANICS
@@ -120,8 +124,6 @@ function compareArrays (a,b) {
     let result = false;
     if (b.length != a.length) {
         return false;
-    } else if ((b.length >= a.length) || (result = false)) {
-        loseGame();
     } else {
         for (let i=0; i<a.length; i++) {
         if (b[0] === a[0]
@@ -133,10 +135,9 @@ function compareArrays (a,b) {
         && b[6] === a[6]) {
             result = true;
             winGame();
-        } else {
-            continue;
-        }
-    }}}
+        } else if ((b.length >= a.length) || (result = false)) {
+            loseGame();
+        }}}}
 
 
 function winGame() {  
@@ -150,6 +151,9 @@ function winGame() {
 function loseGame() {
     document.getElementById("game").classList.add("b-clicked");
     document.getElementById("countdown").classList.add("b-clicked");
+    setTimeout(function(){
+        window.location.reload(1);
+     }, 2500);
     document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
