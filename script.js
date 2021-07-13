@@ -1,3 +1,5 @@
+// SPLASH SCREEN 
+
 const splash = document.querySelector(".splash");
 
 splash.addEventListener('click', (event) => {
@@ -5,6 +7,8 @@ splash.addEventListener('click', (event) => {
     startClock();
     startGame();
 })
+
+// START GAME
 
 function startGame(){
 
@@ -20,7 +24,7 @@ const b7 = document.querySelector("#b7");
 let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
 
-// BUTTON FUNCTIONS //
+// BUTTON FUNCTIONS
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
@@ -106,16 +110,6 @@ b7.addEventListener('click', (event) => {
             b = [];
         }}});
 
-reset.addEventListener('click', (event) => {
-    reset.onclick = function(){
-        resetB ();
-    }});
-
-}
-
-
-function resetB() {
-    
 }
 
 // GAME MECHANICS
@@ -134,6 +128,7 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
+            alert("ye");
             winGame();
         } else if ((b.length >= a.length) || (result = false)) {
             loseGame();
@@ -141,9 +136,7 @@ function compareArrays (a,b) {
 
 
 function winGame() {  
-    document.getElementById("game").innerHTML = "";
     document.getElementById("countdown").innerHTML = "";
-    document.getElementById("reset").innerHTML = "";
     document.getElementById("pup").style.visibility = "visible";
     }
 ;
