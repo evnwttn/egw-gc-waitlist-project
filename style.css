@@ -25,12 +25,10 @@ body {
 
 #container {
 	width: 100%;
-    margin-left: 10%;
-	margin-top: 10%;
+    margin-left: 38%;
+	margin-top: 16%;
     margin-right: 10%;
     }
-
-
 
 p {
     color: #E3E3E3;
@@ -59,16 +57,6 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-
-#pup {
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .splash{
     position: fixed;

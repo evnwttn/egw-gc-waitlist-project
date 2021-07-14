@@ -1,12 +1,21 @@
 // SPLASH SCREEN 
 
 const splash = document.querySelector(".splash");
+const splash2 = document.querySelector(".splash2");
 
-splash.addEventListener('click', (event) => {
+splash.addEventListener("click", (event) => {
     splash.classList.add("display-none");
+    splash2.classList.remove("splash.display-none");
+    splash2.classList.add("splash");
+})
+
+splash2.addEventListener("click", (event) => {
+    splash2.classList.add("display-none");
     startClock();
     startGame();
 })
+
+
 
 // START GAME
 
@@ -128,7 +137,6 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
-            alert("ye");
             winGame();
         } else if ((b.length >= a.length) || (result = false)) {
             loseGame();
@@ -137,7 +145,7 @@ function compareArrays (a,b) {
 
 function winGame() {  
     document.getElementById("countdown").innerHTML = "";
-    document.getElementById("pup").style.visibility = "visible";
+    document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>"
     }
 ;
 
