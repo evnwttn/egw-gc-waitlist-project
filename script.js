@@ -1,9 +1,3 @@
-// DITCH THE TEXT @ THE TOP OF PAGE AND INCLUDE RANDOMIZED QUOTES IN 2ND SPLASH...
-// THAT INDICATE CLUES AS TO THE CORRECT SEQUENCE.
-//  MAKE SURE THAT'S NOT OVERLY REDUNDANT.
-
-
-
 // SPLASH SCREEN 
 
 const splash = document.querySelector(".splash");
@@ -21,25 +15,30 @@ splash2.addEventListener("click", (event) => {
     startGame();
 })
 
-let hintBank = ["Aaa", "Bbb", "Ccc", "Ddd", "Eee", "Fff", "Ggg"];
+let hintBank = ["[2] uneasy lies the head...", 
+                "[4] some battles are won with swords and spears, others with quills and...", 
+                "[6] ...the historian looks backwards, and finally he also believes backwards.", 
+                "[5] ...will come when it will come.", 
+                "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
+                "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
+                "[3] ...that holds up the world. Hope is the dream of a waking man."];
 let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
 document.getElementById("hint").innerHTML = `${hint}`;
-
 
 // START GAME
 
 function startGame(){
 
 const reset = document.querySelector("#reset");
-const b1 = document.querySelector("#b1");
-const b2 = document.querySelector("#b2");
-const b3 = document.querySelector("#b3");
-const b4 = document.querySelector("#b4");
-const b5 = document.querySelector("#b5");
-const b6 = document.querySelector("#b6");
-const b7 = document.querySelector("#b7");
+const b1 = document.querySelector("#b1"); // crown
+const b2 = document.querySelector("#b2"); // lizard
+const b3 = document.querySelector("#b3"); // raven
+const b4 = document.querySelector("#b4"); // skull
+const b5 = document.querySelector("#b5"); // scarab
+const b6 = document.querySelector("#b6"); // pillar 
+const b7 = document.querySelector("#b7"); // crab
 
-let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
+let a = ["b5", "b1", "b6", "b3", "b4", "b7", "b2"]; //SOLUTION
 let b = []; //USERINPUT
 
 // BUTTON FUNCTIONS
