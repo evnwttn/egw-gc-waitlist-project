@@ -21,6 +21,9 @@ splash2.addEventListener("click", (event) => {
     startGame();
 })
 
+let hintBank = ["Aaa", "Bbb", "Ccc", "Ddd", "Eee", "Fff", "Ggg"];
+let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
+document.getElementById("hint").innerHTML = `${hint}`;
 
 
 // START GAME
