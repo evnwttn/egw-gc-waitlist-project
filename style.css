@@ -85,6 +85,10 @@ h1 {
     line-height: 90vh;
 }
 
+.cdclr1{
+    color: #2E2E2E;
+}
+
 
 @keyframes fadeIn{
     to{
