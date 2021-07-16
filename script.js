@@ -7,6 +7,8 @@ splash.addEventListener("click", (event) => {
     splash.classList.add("display-none");
     splash2.classList.remove("splash.display-none");
     splash2.classList.add("splash");
+    let bg1 = document.getElementById("bg1");
+    bg1.play();
 })
 
 splash2.addEventListener("click", (event) => {
@@ -29,12 +31,7 @@ document.getElementById("hint").innerHTML = `${hint}`;
 
 function startGame(){
 
-// let bg2 = document.getElementById("bg2");
-// bg2.addEventListener('ended', function() {
-//     bg2.currentTime = 0;
-//     bg2.play();
-// }, false);
-// bg2.play();
+
 
 const b1 = document.querySelector("#b1"); // crown
 const b2 = document.querySelector("#b2"); // lizard
@@ -151,6 +148,7 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
+            let wG = true;
             winGame();
         } else if ((b.length >= a.length) || (result = false)) {
             loseGame();
@@ -183,8 +181,9 @@ timeH.innerHTML = `${timeSecond}`;
 const countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
-    if(timeSecond <= 0 || timeSecond < 1) {
+    if (wG = true) {
+        return;
+    } else if(timeSecond <= 0 || timeSecond < 1) {
         loseGame();
     }},1000)
 }
-
