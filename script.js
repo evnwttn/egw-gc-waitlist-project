@@ -29,7 +29,13 @@ document.getElementById("hint").innerHTML = `${hint}`;
 
 function startGame(){
 
-const reset = document.querySelector("#reset");
+// let bg2 = document.getElementById("bg2");
+// bg2.addEventListener('ended', function() {
+//     bg2.currentTime = 0;
+//     bg2.play();
+// }, false);
+// bg2.play();
+
 const b1 = document.querySelector("#b1"); // crown
 const b2 = document.querySelector("#b2"); // lizard
 const b3 = document.querySelector("#b3"); // raven
