@@ -182,8 +182,10 @@ const countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
     if (wG = true) {
-        return;
-    } else if(timeSecond <= 0 || timeSecond < 1) {
+        return
+    }
+    if(timeSecond <= 0 || timeSecond < 1) {
         loseGame();
     }},1000)
 }
+
