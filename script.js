@@ -7,14 +7,14 @@ splash.addEventListener("click", (event) => {
     splash.classList.add("display-none");
     splash2.classList.remove("splash.display-none");
     splash2.classList.add("splash");
-    let bg1 = document.getElementById("bg1");
-    bg1.play();
 })
 
 splash2.addEventListener("click", (event) => {
     splash2.classList.add("display-none");
     startClock();
     startGame();
+    let bg1 = document.getElementById("bg1");
+    bg1.play();
 })
 
 let hintBank = ["[2] uneasy lies the head...", 
