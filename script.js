@@ -135,9 +135,11 @@ function compareArrays (a,b) {
             winGame();
         } else if ((b.length >= a.length) || (result = false)) {
             loseGame();
-        }}}}
+        }}}
+    }
 
-function winGame() {  
+function winGame() {
+    endClock();  
     document.getElementById("countdown").innerHTML = "";
     document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>";
     }
@@ -160,18 +162,16 @@ let timeSecond = 15;
 
 timeH.innerHTML = `${timeSecond}`;
     
-var countDown = setInterval (()=>{
+window.countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
-    if ((result == true) && (timeSecond <= 0 || timeSecond < 1)) {
-        clearInterval (countDown); 
-    } else if ((result != true) && (timeSecond <= 0 || timeSecond < 1)) {
+    if (timeSecond <= 0 || timeSecond < 1) {
         loseGame();
     }
     },1000)
 
-
 }
 
-
-
+function endClock(){
+    clearInterval(countDown);
+}
