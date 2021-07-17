@@ -31,7 +31,6 @@ document.getElementById("hint").innerHTML = `${hint}`;
 
 function startGame(){
 
-
 const b1 = document.querySelector("#b1"); // crown
 const b2 = document.querySelector("#b2"); // lizard
 const b3 = document.querySelector("#b3"); // raven
@@ -121,7 +120,6 @@ b7.addEventListener('click', (event) => {
 
 function compareArrays (a,b) {
     let result = false;
-    let stopClock = 0;
     if (b.length != a.length) {
         return false;
     } else {
@@ -134,12 +132,10 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
-            stopClock + 1;
             winGame();
-        } else if ((b.length >= a.length) && (result = false)) {
+        } else if ((b.length >= a.length) || (result = false)) {
             loseGame();
         }}}}
-
 
 function winGame() {  
     document.getElementById("countdown").innerHTML = "";
@@ -167,10 +163,12 @@ timeH.innerHTML = `${timeSecond}`;
 var countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
-    if (timeSecond <= 0 || timeSecond < 1 && stopClock === 0) {
-        loseGame(); }
+    if ((result == true) && (timeSecond <= 0 || timeSecond < 1)) {
+        clearInterval (countDown); 
+    } else if ((result != true) && (timeSecond <= 0 || timeSecond < 1)) {
+        loseGame();
+    }
     },1000)
-
 
 
 }
