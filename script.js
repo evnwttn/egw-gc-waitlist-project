@@ -3,19 +3,19 @@
 const splash = document.querySelector(".splash");
 const splash2 = document.querySelector(".splash2");
 
-splash.addEventListener("click", (event) => {
-    splash.classList.add("display-none");
-    splash2.classList.remove("splash.display-none");
-    splash2.classList.add("splash");
-})
+    splash.addEventListener("click", (event) => {
+        splash.classList.add("display-none");
+        splash2.classList.remove("splash.display-none");
+        splash2.classList.add("splash");
+    })
 
-splash2.addEventListener("click", (event) => {
-    splash2.classList.add("display-none");
-    startClock();
-    startGame();
-    let bg1 = document.getElementById("bg1");
-    bg1.play();
-})
+    splash2.addEventListener("click", (event) => {
+        splash2.classList.add("display-none");
+        startClock();
+        startGame();
+        let bg1 = document.getElementById("bg1");
+        bg1.play();
+    })
 
 let hintBank = ["[2] uneasy lies the head...", 
                 "[4] some battles are won with swords and spears, others with quills and...", 
@@ -24,8 +24,9 @@ let hintBank = ["[2] uneasy lies the head...",
                 "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
                 "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
                 "[3] ...that holds up the world. Hope is the dream of a waking man."];
-let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
-document.getElementById("hint").innerHTML = `${hint}`;
+
+    let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
+    document.getElementById("hint").innerHTML = `${hint}`;
 
 // START GAME
 
@@ -39,8 +40,8 @@ const b5 = document.querySelector("#b5"); // scarab
 const b6 = document.querySelector("#b6"); // pillar 
 const b7 = document.querySelector("#b7"); // crab
 
-let a = ["b5", "b1", "b6", "b3", "b4", "b7", "b2"]; //SOLUTION
-let b = []; //USERINPUT
+    let a = ["b5", "b1", "b6", "b3", "b4", "b7", "b2"]; //SOLUTION
+    let b = []; //USERINPUT
 
 // BUTTON FUNCTIONS
 
@@ -157,20 +158,20 @@ function loseGame() {
 // COUNTDOWN TIMER
 
 function startClock(){
-const timeH = document.querySelector("h1");
-let timeSecond = 15;
 
-timeH.innerHTML = `${timeSecond}`;
-    
-window.countDown = setInterval (()=>{
-    timeSecond--;
+    const timeH = document.querySelector("h1");
+    let timeSecond = 15;
+
     timeH.innerHTML = `${timeSecond}`;
-    if (timeSecond <= 0 || timeSecond < 1) {
+    
+    window.countDown = setInterval (()=>{
+        timeSecond--;
+        timeH.innerHTML = `${timeSecond}`;
+        if (timeSecond <= 0 || timeSecond < 1) {
         loseGame();
-    }
-    },1000)
-
+        }},1000)
 }
+
 
 function endClock(){
     clearInterval(countDown);
