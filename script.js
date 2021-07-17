@@ -32,7 +32,6 @@ document.getElementById("hint").innerHTML = `${hint}`;
 function startGame(){
 
 
-
 const b1 = document.querySelector("#b1"); // crown
 const b2 = document.querySelector("#b2"); // lizard
 const b3 = document.querySelector("#b3"); // raven
@@ -54,9 +53,7 @@ b1.addEventListener('click', (event) => {
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b2.addEventListener('click', (event) => {
     let audio = document.getElementById("fx2");
@@ -66,9 +63,7 @@ b2.addEventListener('click', (event) => {
         b2.classList.remove("b2");
         b2.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b3.addEventListener('click', (event) => {
     let audio = document.getElementById("fx3");
@@ -78,9 +73,7 @@ b3.addEventListener('click', (event) => {
         b3.classList.remove("b3");
         b3.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b4.addEventListener('click', (event) => {
     let audio = document.getElementById("fx4");
@@ -90,9 +83,7 @@ b4.addEventListener('click', (event) => {
         b4.classList.remove("b4");
         b4.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b5.addEventListener('click', (event) => {
     let audio = document.getElementById("fx5");
@@ -102,9 +93,7 @@ b5.addEventListener('click', (event) => {
         b5.classList.remove("b5");
         b5.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b6.addEventListener('click', (event) => {
     let audio = document.getElementById("fx6");
@@ -114,9 +103,7 @@ b6.addEventListener('click', (event) => {
         b6.classList.remove("b6");
         b6.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 b7.addEventListener('click', (event) => {
     let audio = document.getElementById("fx7");
@@ -126,9 +113,7 @@ b7.addEventListener('click', (event) => {
         b7.classList.remove("b7");
         b7.classList.add("b-clicked");
         compareArrays(a,b);
-        if (b.length >= 7) {
-            b = [];
-        }}});
+        }});
 
 }
 
@@ -136,6 +121,7 @@ b7.addEventListener('click', (event) => {
 
 function compareArrays (a,b) {
     let result = false;
+    let stopClock = 0;
     if (b.length != a.length) {
         return false;
     } else {
@@ -148,16 +134,16 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
-            let wG = true;
+            stopClock + 1;
             winGame();
-        } else if ((b.length >= a.length) || (result = false)) {
+        } else if ((b.length >= a.length) && (result = false)) {
             loseGame();
         }}}}
 
 
 function winGame() {  
     document.getElementById("countdown").innerHTML = "";
-    document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>"
+    document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>";
     }
 ;
 
@@ -178,14 +164,16 @@ let timeSecond = 15;
 
 timeH.innerHTML = `${timeSecond}`;
     
-const countDown = setInterval (()=>{
+var countDown = setInterval (()=>{
     timeSecond--;
     timeH.innerHTML = `${timeSecond}`;
-    if (wG = true) {
-        return
-    }
-    if(timeSecond <= 0 || timeSecond < 1) {
-        loseGame();
-    }},1000)
+    if (timeSecond <= 0 || timeSecond < 1 && stopClock === 0) {
+        loseGame(); }
+    },1000)
+
+
+
 }
+
+
 
