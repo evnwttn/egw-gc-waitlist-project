@@ -58,6 +58,34 @@ h1 {
     justify-content: center;
 }
 
+.startScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0D0D0D;
+    opacity: 0;
+    z-index: -10;
+    color: #E3E3E3;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.startScreen-visible{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0D0D0D;
+    opacity: 100%;
+    z-index: 200;
+    color: #E3E3E3;
+    text-align: center;
+    line-height: 90vh;
+}
+
 .splash{
     position: fixed;
     top: 0;

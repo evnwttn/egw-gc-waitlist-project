@@ -10,6 +10,7 @@
 
 const splash = document.querySelector(".splash");
 const splash2 = document.querySelector(".splash2");
+const startScreen = document.querySelector(".startScreen");
 
     splash.addEventListener("click", (event) => {
         splash.classList.add("display-none");
@@ -19,30 +20,15 @@ const splash2 = document.querySelector(".splash2");
 
     splash2.addEventListener("click", (event) => {
         splash2.classList.add("display-none");
-        startClock();
-        startGame();
-        // let bg1 = document.getElementById("bg1");
-        // bg1.play();
+        startScreen.classList.remove("startScreen");
+        startScreen.classList.add("startScreen-visible");
     })
 
-// let hintBank = ["[2] uneasy lies the head...", 
-//                 "[4] some battles are won with swords and spears, others with quills and...", 
-//                 "[6] ...the historian looks backwards, and finally he also believes backwards.", 
-//                 "[5] ...will come when it will come.", 
-//                 "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
-//                 "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
-//                 "[3] ...that holds up the world. Hope is the dream of a waking man."];
-
-//     let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
-//     document.getElementById("hint").innerHTML = `${hint}`;
-
-// START BUTTON
-
-const start = document.querySelector("start");
-start.addEventListener('click', (event) => {
-    start.onclick = function(){
+    startScreen.addEventListener("click", (event) => {
+        startScreen.classList.remove("startScreen-visible");
+        startScreen.classList.add("startScreen");
         startGame();
-        }});
+    })
 
 function startGame(){
 
@@ -140,8 +126,6 @@ b7.addEventListener('click', (event) => {
         compareArrays(a,b);
         }});
 
-}
-
 // GAME MECHANICS
 
 function compareArrays (a,b) {
@@ -180,24 +164,36 @@ function loseGame() {
     document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
+}
+
 // COUNTDOWN TIMER
 
-function startClock(){
+// function startClock(){
 
-    const timeH = document.querySelector("h1");
-    let timeSecond = 15;
+//     const timeH = document.querySelector("h1");
+//     let timeSecond = 15;
 
-    timeH.innerHTML = `${timeSecond}`;
+//     timeH.innerHTML = `${timeSecond}`;
     
-    window.countDown = setInterval (()=>{
-        timeSecond--;
-        timeH.innerHTML = `${timeSecond}`;
-        if (timeSecond <= 0 || timeSecond < 1) {
-        loseGame();
-        }},1000)
-}
+//     window.countDown = setInterval (()=>{
+//         timeSecond--;
+//         timeH.innerHTML = `${timeSecond}`;
+//         if (timeSecond <= 0 || timeSecond < 1) {
+//         loseGame();
+//         }},1000)
+// }
 
+// function endClock(){
+//     clearInterval(countDown);
+// }
 
-function endClock(){
-    clearInterval(countDown);
-}
+// let hintBank = ["[2] uneasy lies the head...", 
+//                 "[4] some battles are won with swords and spears, others with quills and...", 
+//                 "[6] ...the historian looks backwards, and finally he also believes backwards.", 
+//                 "[5] ...will come when it will come.", 
+//                 "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
+//                 "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
+//                 "[3] ...that holds up the world. Hope is the dream of a waking man."];
+
+//     let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
+//     document.getElementById("hint").innerHTML = `${hint}`;
