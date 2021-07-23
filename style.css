@@ -139,3 +139,10 @@ h1 {
 .b7:hover {
     opacity: 0.6;
 }
+
+#start {
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+}

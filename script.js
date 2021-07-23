@@ -36,7 +36,13 @@ const splash2 = document.querySelector(".splash2");
 //     let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
 //     document.getElementById("hint").innerHTML = `${hint}`;
 
-// START GAME
+// START BUTTON
+
+const start = document.querySelector("start");
+start.addEventListener('click', (event) => {
+    start.onclick = function(){
+        startGame();
+        }});
 
 function startGame(){
 
@@ -72,9 +78,8 @@ b1.addEventListener('click', (event) => {
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
         compareArrays(a,b);
-        alert(a);
         }});
-
+  
 b2.addEventListener('click', (event) => {
     // let audio = document.getElementById("fx2");
     //     audio.play();
