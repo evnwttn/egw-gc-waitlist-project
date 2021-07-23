@@ -1,3 +1,11 @@
+// JAN'S SUGGESTIONS...
+//      - RANDOMIZE ARRAY A
+//      - PLAYS THE SOUNDS ASSOCIATED WITH A, PLAYERS WILL MEMORIZE 
+//      - ADDING A HEAD TO HEAD FUNCTION 
+//      - ADDING A START BUTTON 
+//      - A DESCRIPTION OF WHAT THE GAME IS (lol yeah probably a good idea)
+//      - A WIN ANIMATION 
+
 // SPLASH SCREEN 
 
 const splash = document.querySelector(".splash");
@@ -13,20 +21,20 @@ const splash2 = document.querySelector(".splash2");
         splash2.classList.add("display-none");
         startClock();
         startGame();
-        let bg1 = document.getElementById("bg1");
-        bg1.play();
+        // let bg1 = document.getElementById("bg1");
+        // bg1.play();
     })
 
-let hintBank = ["[2] uneasy lies the head...", 
-                "[4] some battles are won with swords and spears, others with quills and...", 
-                "[6] ...the historian looks backwards, and finally he also believes backwards.", 
-                "[5] ...will come when it will come.", 
-                "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
-                "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
-                "[3] ...that holds up the world. Hope is the dream of a waking man."];
+// let hintBank = ["[2] uneasy lies the head...", 
+//                 "[4] some battles are won with swords and spears, others with quills and...", 
+//                 "[6] ...the historian looks backwards, and finally he also believes backwards.", 
+//                 "[5] ...will come when it will come.", 
+//                 "[1] ...that we tread upon, in corporal sufferance finds a pang as great as when a giant dies.", 
+//                 "[7] ...but if one bites you, it doesn't make a difference whether you believe in it or not.", 
+//                 "[3] ...that holds up the world. Hope is the dream of a waking man."];
 
-    let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
-    document.getElementById("hint").innerHTML = `${hint}`;
+//     let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
+//     document.getElementById("hint").innerHTML = `${hint}`;
 
 // START GAME
 
@@ -46,8 +54,8 @@ const b7 = document.querySelector("#b7"); // crab
 // BUTTON FUNCTIONS
 
 b1.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx1");
-        audio.play();
+    // let audio = document.getElementById("fx1");
+    //     audio.play();
     b1.onclick = function(){
         b.push("b1");
         b1.classList.remove("b1");
@@ -56,8 +64,8 @@ b1.addEventListener('click', (event) => {
         }});
 
 b2.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx2");
-        audio.play();
+    // let audio = document.getElementById("fx2");
+    //     audio.play();
     b2.onclick = function(){
         b.push("b2");
         b2.classList.remove("b2");
@@ -66,8 +74,8 @@ b2.addEventListener('click', (event) => {
         }});
 
 b3.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx3");
-        audio.play();
+    // let audio = document.getElementById("fx3");
+    //     audio.play();
     b3.onclick = function(){
         b.push("b3");
         b3.classList.remove("b3");
@@ -76,8 +84,8 @@ b3.addEventListener('click', (event) => {
         }});
 
 b4.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx4");
-        audio.play();
+    // let audio = document.getElementById("fx4");
+    //     audio.play();
     b4.onclick = function(){
         b.push("b4");
         b4.classList.remove("b4");
@@ -86,8 +94,8 @@ b4.addEventListener('click', (event) => {
         }});
 
 b5.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx5");
-        audio.play();
+    // let audio = document.getElementById("fx5");
+    //     audio.play();
     b5.onclick = function(){
         b.push("b5");
         b5.classList.remove("b5");
@@ -96,8 +104,8 @@ b5.addEventListener('click', (event) => {
         }});
 
 b6.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx6");
-        audio.play();
+    // let audio = document.getElementById("fx6");
+    //     audio.play();
     b6.onclick = function(){
         b.push("b6");
         b6.classList.remove("b6");
@@ -106,8 +114,8 @@ b6.addEventListener('click', (event) => {
         }});
 
 b7.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx7");
-        audio.play();
+    // let audio = document.getElementById("fx7");
+    //     audio.play();
     b7.onclick = function(){
         b.push("b7");
         b7.classList.remove("b7");
