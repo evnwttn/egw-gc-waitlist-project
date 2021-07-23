@@ -48,8 +48,19 @@ const b5 = document.querySelector("#b5"); // scarab
 const b6 = document.querySelector("#b6"); // pillar 
 const b7 = document.querySelector("#b7"); // crab
 
-    let a = ["b5", "b1", "b6", "b3", "b4", "b7", "b2"]; //SOLUTION
-    let b = []; //USERINPUT
+// RANDOM SOLUTION
+
+function shuffle(array) { 
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array [j], array[i]];
+    }
+}
+
+let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
+let b = []; //USERINPUT
+shuffle(a);
+alert(a);
 
 // BUTTON FUNCTIONS
 
@@ -61,6 +72,7 @@ b1.addEventListener('click', (event) => {
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(a);
         }});
 
 b2.addEventListener('click', (event) => {
