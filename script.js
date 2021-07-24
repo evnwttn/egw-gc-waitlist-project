@@ -1,10 +1,11 @@
 // JAN'S SUGGESTIONS...
-//      - RANDOMIZE ARRAY A
+//      - RANDOMIZE ARRAY A  [COMPLETE]
 //      - PLAYS THE SOUNDS ASSOCIATED WITH A, PLAYERS WILL MEMORIZE 
 //      - ADDING A HEAD TO HEAD FUNCTION 
-//      - ADDING A START BUTTON 
+//      - ADDING A START BUTTON [COMPLETE]
 //      - A DESCRIPTION OF WHAT THE GAME IS (lol yeah probably a good idea)
 //      - A WIN ANIMATION 
+//      - SHOW IF GUESS CORRECT [COMPLETE]
 
 
 
@@ -73,8 +74,8 @@ shuffle(a);
 alert(a);
 
 b1.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx1");
-    //     audio.play();
+    let audio = document.getElementById("fx1");
+        audio.play();
     if (on = true) {
     b1.onclick = function(){
         b.push("b1");
@@ -87,13 +88,11 @@ b1.addEventListener('click', (event) => {
                 b1.classList.add("b-wrong");
             }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
   
 b2.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx2");
-    //     audio.play();
+    let audio = document.getElementById("fx2");
+        audio.play();
     if (on = true) {
         b2.onclick = function(){
         b.push("b2");
@@ -111,8 +110,8 @@ b2.addEventListener('click', (event) => {
         }}});
 
 b3.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx3");
-    //     audio.play();
+    let audio = document.getElementById("fx3");
+        audio.play();
     if (on = true) {
     b3.onclick = function(){
         b.push("b3");
@@ -120,16 +119,18 @@ b3.addEventListener('click', (event) => {
         // b3.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b3")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b3.classList.add("b-right");
+        } else {
+            b3.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
         }}});
 
 b4.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx4");
-    //     audio.play();
+    let audio = document.getElementById("fx4");
+        audio.play();
     if (on = true) {
     b4.onclick = function(){
         b.push("b4");
@@ -137,16 +138,18 @@ b4.addEventListener('click', (event) => {
         // b4.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b4")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b4.classList.add("b-right");
+        } else {
+            b4.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
         }}});
 
 b5.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx5");
-    //     audio.play();
+    let audio = document.getElementById("fx5");
+        audio.play();
    if (on = true) {
     b5.onclick = function(){
         b.push("b5");
@@ -154,16 +157,18 @@ b5.addEventListener('click', (event) => {
         // b5.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b5")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b5.classList.add("b-right");
+        } else {
+            b5.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
         }}});
 
 b6.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx6");
-    //     audio.play();
+    let audio = document.getElementById("fx6");
+        audio.play();
     if (on = true) {
     b6.onclick = function(){
         b.push("b6");
@@ -171,16 +176,18 @@ b6.addEventListener('click', (event) => {
         // b6.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b6")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b6.classList.add("b-right");
+        } else {
+            b6.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
         }}});
 
 b7.addEventListener('click', (event) => {
-    // let audio = document.getElementById("fx7");
-    //     audio.play();
+    let audio = document.getElementById("fx7");
+        audio.play();
     if (on = true) {
     b7.onclick = function(){
         b.push("b7");
@@ -188,12 +195,13 @@ b7.addEventListener('click', (event) => {
         // b7.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b7")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b7.classList.add("b-right");
+        } else {
+            b6.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
-        alert(playerGuess);
         }}});
 
 // GAME MECHANICS
