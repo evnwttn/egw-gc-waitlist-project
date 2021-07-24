@@ -24,11 +24,19 @@ const startScreen = document.querySelector(".startScreen");
         startScreen.classList.add("startScreen-visible");
     })
 
-    startScreen.addEventListener("click", (event) => {
-        startScreen.classList.remove("startScreen-visible");
-        startScreen.classList.add("startScreen");
-        startGame();
-    })
+// let haltStart = 0;
+
+//     startScreen.addEventListener("click", (event) => {
+//         haltStart++;
+//         startScreen.classList.remove("startScreen-visible");
+//         startScreen.classList.add("startScreen");
+//         startGame();
+//         if (haltStart !== 0) {
+//             startScreen.removeEventListener("click", (event) => {
+//                 startGame();
+//             })
+//         }
+//     }
 
 function startGame(){
 
