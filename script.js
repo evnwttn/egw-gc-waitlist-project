@@ -6,39 +6,49 @@
 //      - A DESCRIPTION OF WHAT THE GAME IS (lol yeah probably a good idea)
 //      - A WIN ANIMATION 
 
+
+
 // SPLASH SCREEN 
 
-const splash = document.querySelector(".splash"); // FIRST SPLASH
-const splash2 = document.querySelector(".splash2"); // SECOND SPLASH
-const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR SCREEN
-const p1 = document.querySelector(".p1"); // ONE PLAYER
-const p2 = document.querySelector(".p2"); // TWO PLAYER
+    const splash = document.querySelector(".splash"); // FIRST SPLASH
+    const splash2 = document.querySelector(".splash2"); // SECOND SPLASH
+    const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR SCREEN
+    const p1 = document.querySelector(".p1"); // ONE PLAYER
+    const p2 = document.querySelector(".p2"); // TWO PLAYER
 
-    splash.addEventListener("click", (event) => {
-        splash.classList.add("display-none");
-        splash2.classList.remove("splash.display-none");
-        splash2.classList.add("splash");
-    })
-
-    splash2.addEventListener("click", (event) => {
-        splash2.classList.add("display-none");
-        startScreen.classList.remove("startScreen");
-        startScreen.classList.add("startScreen-visible");
-    })
-
-    p1.addEventListener("click", (event) => {
-        let startCount = 0;
-        startScreen.classList.remove("startScreen-visible");
-        startScreen.classList.add("startScreen");
-        startGame;
+        splash.addEventListener("click", (event) => {
+            splash.classList.add("display-none");
+            splash2.classList.remove("splash.display-none");
+            splash2.classList.add("splash");
         })
-        
-    p2.addEventListener("click", (event) => {
-        alert("N/A")
-    })
+
+        splash2.addEventListener("click", (event) => {
+            splash2.classList.add("display-none");
+            startScreen.classList.remove("startScreen");
+            startScreen.classList.add("startScreen-visible");
+        })
+
+        p1.addEventListener("click", (event) => {
+            startScreen.classList.remove("startScreen-visible");
+            startScreen.classList.add("startScreen");
+            })
+            
+        p2.addEventListener("click", (event) => {
+            alert("N/A")
+        })
 
 
-    
+// START GAME
+
+const on;
+const userTurn;
+const win;
+
+        const sB = document.querySelector(".startButton");
+            sB.addEventListener("click", (event) => {
+                startGame();
+            })
+
 
 function startGame(){
 
@@ -49,8 +59,6 @@ const b4 = document.querySelector("#b4"); // skull
 const b5 = document.querySelector("#b5"); // scarab
 const b6 = document.querySelector("#b6"); // pillar 
 const b7 = document.querySelector("#b7"); // crab
-
-// RANDOM SOLUTION
 
 function shuffle(array) { 
     for (let i = array.length - 1; i > 0; i--) {
@@ -64,8 +72,6 @@ let b = []; //USERINPUT
 shuffle(a);
 alert(a);
 
-// BUTTON FUNCTIONS
-
 b1.addEventListener('click', (event) => {
     // let audio = document.getElementById("fx1");
     //     audio.play();
@@ -74,6 +80,8 @@ b1.addEventListener('click', (event) => {
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
   
 b2.addEventListener('click', (event) => {
@@ -84,6 +92,8 @@ b2.addEventListener('click', (event) => {
         b2.classList.remove("b2");
         b2.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 b3.addEventListener('click', (event) => {
@@ -94,6 +104,8 @@ b3.addEventListener('click', (event) => {
         b3.classList.remove("b3");
         b3.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 b4.addEventListener('click', (event) => {
@@ -104,6 +116,8 @@ b4.addEventListener('click', (event) => {
         b4.classList.remove("b4");
         b4.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 b5.addEventListener('click', (event) => {
@@ -114,6 +128,8 @@ b5.addEventListener('click', (event) => {
         b5.classList.remove("b5");
         b5.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 b6.addEventListener('click', (event) => {
@@ -124,6 +140,8 @@ b6.addEventListener('click', (event) => {
         b6.classList.remove("b6");
         b6.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 b7.addEventListener('click', (event) => {
@@ -134,6 +152,8 @@ b7.addEventListener('click', (event) => {
         b7.classList.remove("b7");
         b7.classList.add("b-clicked");
         compareArrays(a,b);
+        alert(b);
+        alert(a);
         }});
 
 // GAME MECHANICS
@@ -152,29 +172,29 @@ function compareArrays (a,b) {
         && b[5] === a[5]
         && b[6] === a[6]) {
             result = true;
-            winGame();
+            alert("yes!")
         } else if ((b.length >= a.length) || (result = false)) {
-            loseGame();
+            alert("no!")
         }}}
     }
 
-function winGame() {
-    endClock();  
-    document.getElementById("countdown").innerHTML = "";
-    document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>";
-    }
-;
-
-function loseGame() {
-    document.getElementById("game").classList.add("b-clicked");
-    document.getElementById("countdown").classList.add("b-clicked");
-    setTimeout(function(){
-        window.location.reload(1);
-     }, 2500);
-    document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
 }
 
-}
+// function winGame() {
+//     document.getElementById("countdown").innerHTML = "";
+//     document.getElementById("text").innerHTML = "<p>Correct.</p><p2>There used to be a picture of a dog here.</p>";
+//     }
+// ;
+
+// function loseGame() {
+//     document.getElementById("game").classList.add("b-clicked");
+//     document.getElementById("countdown").classList.add("b-clicked");
+//     setTimeout(function(){
+//         window.location.reload(1);
+//      }, 2500);
+//     document.getElementById("text").innerHTML = "<p>You have failed.</p><p2>Try again?</p>";
+//     alert("boo");
+// }
 
 // COUNTDOWN TIMER
 
@@ -207,3 +227,4 @@ function loseGame() {
 
 //     let hint = hintBank[Math.floor(Math.random() * hintBank.length)];
 //     document.getElementById("hint").innerHTML = `${hint}`;
+
