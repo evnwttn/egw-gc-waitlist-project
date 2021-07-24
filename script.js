@@ -105,8 +105,6 @@ b2.addEventListener('click', (event) => {
             b2.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 b3.addEventListener('click', (event) => {
@@ -124,8 +122,6 @@ b3.addEventListener('click', (event) => {
             b3.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 b4.addEventListener('click', (event) => {
@@ -143,8 +139,6 @@ b4.addEventListener('click', (event) => {
             b4.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 b5.addEventListener('click', (event) => {
@@ -162,8 +156,6 @@ b5.addEventListener('click', (event) => {
             b5.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 b6.addEventListener('click', (event) => {
@@ -181,8 +173,6 @@ b6.addEventListener('click', (event) => {
             b6.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 b7.addEventListener('click', (event) => {
@@ -197,11 +187,9 @@ b7.addEventListener('click', (event) => {
         if (playerGuess == a.indexOf("b7")) {
             b7.classList.add("b-right");
         } else {
-            b6.classList.add("b-wrong");
+            b7.classList.add("b-wrong");
         }
         compareArrays(a,b);
-        alert(b);
-        alert(a);
         }}});
 
 // GAME MECHANICS
