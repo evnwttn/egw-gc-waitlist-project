@@ -11,6 +11,8 @@
 const splash = document.querySelector(".splash"); // FIRST SPLASH
 const splash2 = document.querySelector(".splash2"); // SECOND SPLASH
 const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR SCREEN
+const p1 = document.querySelector(".p1"); // ONE PLAYER
+const p2 = document.querySelector(".p2"); // TWO PLAYER
 
     splash.addEventListener("click", (event) => {
         splash.classList.add("display-none");
@@ -24,12 +26,18 @@ const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR S
         startScreen.classList.add("startScreen-visible");
     })
 
-
-    startScreen.addEventListener("click", (event) => {
-        startScreen.classList.add("startScreen");
+    p1.addEventListener("click", (event) => {
+        let startCount = 0;
         startScreen.classList.remove("startScreen-visible");
-        startGame();
-            })
+        startScreen.classList.add("startScreen");
+        startGame;
+        })
+        
+    p2.addEventListener("click", (event) => {
+        alert("N/A")
+    })
+
+
     
 
 function startGame(){
