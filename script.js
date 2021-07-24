@@ -8,9 +8,9 @@
 
 // SPLASH SCREEN 
 
-const splash = document.querySelector(".splash");
-const splash2 = document.querySelector(".splash2");
-const startScreen = document.querySelector(".startScreen");
+const splash = document.querySelector(".splash"); // FIRST SPLASH
+const splash2 = document.querySelector(".splash2"); // SECOND SPLASH
+const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR SCREEN
 
     splash.addEventListener("click", (event) => {
         splash.classList.add("display-none");
@@ -24,19 +24,13 @@ const startScreen = document.querySelector(".startScreen");
         startScreen.classList.add("startScreen-visible");
     })
 
-// let haltStart = 0;
 
-//     startScreen.addEventListener("click", (event) => {
-//         haltStart++;
-//         startScreen.classList.remove("startScreen-visible");
-//         startScreen.classList.add("startScreen");
-//         startGame();
-//         if (haltStart !== 0) {
-//             startScreen.removeEventListener("click", (event) => {
-//                 startGame();
-//             })
-//         }
-//     }
+    startScreen.addEventListener("click", (event) => {
+        startScreen.classList.add("startScreen");
+        startScreen.classList.remove("startScreen-visible");
+        startGame();
+            })
+    
 
 function startGame(){
 
