@@ -42,16 +42,16 @@
 
 // START GAME
 
-const b1 = document.querySelector("#b1"); // crown
-const b2 = document.querySelector("#b2"); // lizard
-const b3 = document.querySelector("#b3"); // raven
-const b4 = document.querySelector("#b4"); // skull
-const b5 = document.querySelector("#b5"); // scarab
-const b6 = document.querySelector("#b6"); // pillar 
-const b7 = document.querySelector("#b7"); // crab
+    const b1 = document.querySelector("#b1"); // crown
+    const b2 = document.querySelector("#b2"); // lizard
+    const b3 = document.querySelector("#b3"); // raven
+    const b4 = document.querySelector("#b4"); // skull
+    const b5 = document.querySelector("#b5"); // scarab
+    const b6 = document.querySelector("#b6"); // pillar 
+    const b7 = document.querySelector("#b7"); // crab
 
-let on = false;
-let playerGuess = -1;
+    let on = false; // game engaged
+    let playerGuess = -1; // # of player guesses
 
         const sB = document.querySelector(".startButton");
             sB.addEventListener("click", (event) => {
@@ -59,29 +59,28 @@ let playerGuess = -1;
                 on = true;
             })
 
-function preGame(){
-    b1.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx1");
-            audio.play();})     
-    b2.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx2");
-            audio.play();})    
-    b3.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx3");
-            audio.play();})     
-    b4.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx4");
-            audio.play();})    
-    b5.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx5");
-            audio.play();})    
-    b6.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx6");
-            audio.play();})     
-    b7.addEventListener('click', (event) => {
-        let audio = document.getElementById("fx7");
-            audio.play();})
-} 
+    function preGame(){ // button audio-only
+        b1.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx1");
+                audio.play();})     
+        b2.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx2");
+                audio.play();})    
+        b3.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx3");
+                audio.play();})     
+        b4.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx4");
+                audio.play();})    
+        b5.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx5");
+                audio.play();})    
+        b6.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx6");
+                audio.play();})     
+        b7.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx7");
+                audio.play();})} 
 
 function startGame(){
 
