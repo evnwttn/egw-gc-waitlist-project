@@ -78,12 +78,14 @@ b1.addEventListener('click', (event) => {
     if (on = true) {
     b1.onclick = function(){
         b.push("b1");
-        b1.classList.remove("b1");
-        b1.classList.add("b-clicked");
+        // b1.classList.remove("b1");
+        // b1.classList.add("b-clicked");
         playerGuess++;
             if (playerGuess == a.indexOf("b1")) {
-                alert("thats dope")
-            } else alert("that's not dope");
+                b1.classList.add("b-right");
+            } else {
+                b1.classList.add("b-wrong");
+            }
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -95,12 +97,14 @@ b2.addEventListener('click', (event) => {
     if (on = true) {
         b2.onclick = function(){
         b.push("b2");
-        b2.classList.remove("b2");
-        b2.classList.add("b-clicked");
+        // b2.classList.remove("b2");
+        // b2.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b2")) {
-            alert("thats dope")
-        } else alert("that's not dope");
+            b2.classList.add("b-right");
+        } else {
+            b2.classList.add("b-wrong");
+        }
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -112,8 +116,8 @@ b3.addEventListener('click', (event) => {
     if (on = true) {
     b3.onclick = function(){
         b.push("b3");
-        b3.classList.remove("b3");
-        b3.classList.add("b-clicked");
+        // b3.classList.remove("b3");
+        // b3.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b3")) {
             alert("thats dope")
@@ -129,8 +133,8 @@ b4.addEventListener('click', (event) => {
     if (on = true) {
     b4.onclick = function(){
         b.push("b4");
-        b4.classList.remove("b4");
-        b4.classList.add("b-clicked");
+        // b4.classList.remove("b4");
+        // b4.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b4")) {
             alert("thats dope")
@@ -146,8 +150,8 @@ b5.addEventListener('click', (event) => {
    if (on = true) {
     b5.onclick = function(){
         b.push("b5");
-        b5.classList.remove("b5");
-        b5.classList.add("b-clicked");
+        // b5.classList.remove("b5");
+        // b5.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b5")) {
             alert("thats dope")
@@ -163,8 +167,8 @@ b6.addEventListener('click', (event) => {
     if (on = true) {
     b6.onclick = function(){
         b.push("b6");
-        b6.classList.remove("b6");
-        b6.classList.add("b-clicked");
+        // b6.classList.remove("b6");
+        // b6.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b6")) {
             alert("thats dope")
@@ -180,8 +184,8 @@ b7.addEventListener('click', (event) => {
     if (on = true) {
     b7.onclick = function(){
         b.push("b7");
-        b7.classList.remove("b7");
-        b7.classList.add("b-clicked");
+        // b7.classList.remove("b7");
+        // b7.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b7")) {
             alert("thats dope")

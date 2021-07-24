@@ -200,3 +200,11 @@ h1 {
 .p2:hover {
     opacity: 0.6;
 }
+
+.b-wrong {
+    background: red;
+}
+
+.b-right {
+    background: green;
+}
