@@ -41,7 +41,7 @@
 // START GAME
 
 let on = false;
-let playerGuess;
+let playerGuess = -1;
 
         const sB = document.querySelector(".startButton");
             sB.addEventListener("click", (event) => {
@@ -67,7 +67,7 @@ function shuffle(array) {
     }
 }
 
-let a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
+window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
 shuffle(a);
 alert(a);
@@ -81,6 +81,9 @@ b1.addEventListener('click', (event) => {
         b1.classList.remove("b1");
         b1.classList.add("b-clicked");
         playerGuess++;
+            if (playerGuess == a.indexOf("b1")) {
+                alert("thats dope")
+            } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -95,6 +98,9 @@ b2.addEventListener('click', (event) => {
         b2.classList.remove("b2");
         b2.classList.add("b-clicked");
         playerGuess++;
+        if (playerGuess == a.indexOf("b2")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -109,6 +115,9 @@ b3.addEventListener('click', (event) => {
         b3.classList.remove("b3");
         b3.classList.add("b-clicked");
         playerGuess++;
+        if (playerGuess == a.indexOf("b3")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -123,6 +132,9 @@ b4.addEventListener('click', (event) => {
         b4.classList.remove("b4");
         b4.classList.add("b-clicked");
         playerGuess++;
+        if (playerGuess == a.indexOf("b4")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -137,6 +149,9 @@ b5.addEventListener('click', (event) => {
         b5.classList.remove("b5");
         b5.classList.add("b-clicked");
         playerGuess++;
+        if (playerGuess == a.indexOf("b5")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -151,6 +166,9 @@ b6.addEventListener('click', (event) => {
         b6.classList.remove("b6");
         b6.classList.add("b-clicked");
         playerGuess++;
+        if (playerGuess == a.indexOf("b6")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
@@ -164,9 +182,14 @@ b7.addEventListener('click', (event) => {
         b.push("b7");
         b7.classList.remove("b7");
         b7.classList.add("b-clicked");
+        playerGuess++;
+        if (playerGuess == a.indexOf("b7")) {
+            alert("thats dope")
+        } else alert("that's not dope");
         compareArrays(a,b);
         alert(b);
         alert(a);
+        alert(playerGuess);
         }}});
 
 // GAME MECHANICS
