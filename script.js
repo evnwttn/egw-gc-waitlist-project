@@ -33,7 +33,6 @@
             startScreen.classList.remove("startScreen-visible");
             startScreen.classList.add("startScreen");
             preGame();
-            runSequence();
             })
             
         p2.addEventListener("click", (event) => {
@@ -83,18 +82,6 @@
             let audio = document.getElementById("fx7");
                 audio.play();})} 
 
-function runSequence(){
-    b1.click();
-    b2.click();
-    b3.click();
-    b4.click();
-    b5.click();
-    b6.click();
-    b7.click();
-}
-
-
-
 function startGame(){
 
 function shuffle(array) { 
@@ -108,6 +95,13 @@ window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
 shuffle(a);
 alert(a);
+runSequence();
+
+
+function runSequence(){
+    for (let i = 0; i < a.length; i++)
+    (a[i]).click();
+}
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
