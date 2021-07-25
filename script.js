@@ -33,6 +33,7 @@
             startScreen.classList.remove("startScreen-visible");
             startScreen.classList.add("startScreen");
             preGame();
+            runSequence();
             })
             
         p2.addEventListener("click", (event) => {
@@ -81,6 +82,18 @@
         b7.addEventListener('click', (event) => {
             let audio = document.getElementById("fx7");
                 audio.play();})} 
+
+function runSequence(){
+    b1.click();
+    b2.click();
+    b3.click();
+    b4.click();
+    b5.click();
+    b6.click();
+    b7.click();
+}
+
+
 
 function startGame(){
 
