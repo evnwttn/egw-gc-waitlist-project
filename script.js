@@ -99,9 +99,13 @@ runSequence();
 
 
 function runSequence(){
-    for (let i = 0; i < a.length; i++)
-    (a[i]).click();
-}
+    for (let i = 0; i < a.length; i++) {
+    alert(a[i]);
+}}
+
+
+
+
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
