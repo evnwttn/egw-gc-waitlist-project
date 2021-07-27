@@ -93,26 +93,25 @@ function shuffle(array) {
 
 function runSequence(){
     for (let i = 0; i < a.length; i++) {
-        if (a[i] === b1) {
-            let audio = document.getElementById("fx1");
-            audio.play();
-        } else if (a[i] === b2) {
+        if ([a[i]] == "b1") {
+            alert("yeah");
+        } else if (a[i] == "b2") {
             let audio = document.getElementById("fx2");
             audio.play();
-        } else if (a[i] === b3) {
-            let audio = document.getElementById("fx2");
+        } else if (a[i] == "b3") {
+            let audio = document.getElementById("fx3");
             audio.play();
-        } else if (a[i] === b4) {
-            let audio = document.getElementById("fx2");
+        } else if (a[i] == "b4") {
+            let audio = document.getElementById("fx4");
             audio.play();
-        } else if (a[i] === b5) {
-            let audio = document.getElementById("fx2");
+        } else if (a[i] == "b5") {
+            let audio = document.getElementById("fx5");
             audio.play();
-        } else if (a[i] === b6) {
-            let audio = document.getElementById("fx2");
+        } else if (a[i] == "b6") {
+            let audio = document.getElementById("fx6");
             audio.play();
-        } else if (a[i] === b7) {
-            let audio = document.getElementById("fx2");
+        } else if (a[i] == "b7") {
+            let audio = document.getElementById("fx7");
             audio.play();
         }}}
 
