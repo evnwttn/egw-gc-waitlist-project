@@ -91,21 +91,36 @@ function shuffle(array) {
     }
 }
 
+function runSequence(){
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === b1) {
+            let audio = document.getElementById("fx1");
+            audio.play();
+        } else if (a[i] === b2) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        } else if (a[i] === b3) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        } else if (a[i] === b4) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        } else if (a[i] === b5) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        } else if (a[i] === b6) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        } else if (a[i] === b7) {
+            let audio = document.getElementById("fx2");
+            audio.play();
+        }}}
+
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
 shuffle(a);
 alert(a);
 runSequence();
-
-
-function runSequence(){
-    for (let i = 0; i < a.length; i++) {
-    alert(a[i]);
-}}
-
-
-
-
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
