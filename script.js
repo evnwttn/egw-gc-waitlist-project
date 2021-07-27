@@ -94,25 +94,33 @@ function shuffle(array) {
 function runSequence(){
     for (let i = 0; i < a.length; i++) {
         if ([a[i]] == "b1") {
-            alert("yeah");
+            setTimeout(function () {
+                alert("b1");
+            }, 1000);
         } else if (a[i] == "b2") {
-            let audio = document.getElementById("fx2");
-            audio.play();
+            setTimeout(function () {
+                alert("b2");
+            }, 1000);
         } else if (a[i] == "b3") {
-            let audio = document.getElementById("fx3");
-            audio.play();
+            setTimeout(function () {
+                alert("b3");
+            }, 1000);
         } else if (a[i] == "b4") {
-            let audio = document.getElementById("fx4");
-            audio.play();
+            setTimeout(function () {
+                alert("b4");
+            }, 1000);
         } else if (a[i] == "b5") {
-            let audio = document.getElementById("fx5");
-            audio.play();
+            setTimeout(function () {
+                alert("b5");
+            }, 1000);
         } else if (a[i] == "b6") {
-            let audio = document.getElementById("fx6");
-            audio.play();
+            setTimeout(function () {
+                alert("b6");
+            }, 1000);
         } else if (a[i] == "b7") {
-            let audio = document.getElementById("fx7");
-            audio.play();
+            setTimeout(function () {
+                alert("b7");
+            }, 1000);
         }}}
 
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
