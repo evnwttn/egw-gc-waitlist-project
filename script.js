@@ -96,32 +96,33 @@ function runSequence(){
         if ([a[i]] == "b1") {
             setTimeout(function () {
                 alert("b1");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b2") {
             setTimeout(function () {
                 alert("b2");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b3") {
             setTimeout(function () {
                 alert("b3");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b4") {
             setTimeout(function () {
                 alert("b4");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b5") {
             setTimeout(function () {
                 alert("b5");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b6") {
             setTimeout(function () {
                 alert("b6");
-            }, 1000);
+            }, i * 3000);
         } else if (a[i] == "b7") {
             setTimeout(function () {
                 alert("b7");
-            }, 1000);
+            }, i * 3000);
         }}}
+
 
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
 let b = []; //USERINPUT
