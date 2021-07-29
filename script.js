@@ -1,12 +1,9 @@
-// JAN'S SUGGESTIONS... // EV'S UPDATES
-//      - RANDOMIZE ARRAY A  [100% COMPLETE]
+// TO DO
 //      - PLAYS THE SOUNDS ASSOCIATED WITH A, PLAYERS WILL MEMORIZE [75%]
 //      - RE-DO PIANO SOUNDS & TIME EACH FOR THE PLAYBACK FEATURE UNDER SEQUENCE. ALSO NEED FADEOUTS. [25%]
 //      - ADDING A HEAD TO HEAD FUNCTION [0%]
-//      - ADDING A START BUTTON [100% COMPLETE]
 //      - A DESCRIPTION OF WHAT THE GAME IS [25%]
 //      - A WIN ANIMATION [0%]
-//      - SHOW IF GUESS CORRECT [100% COMPLETE]
 
 // SPLASH SCREEN 
 
@@ -60,7 +57,7 @@
 
 // PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
 
-    function preGame(){ 
+    function preGame(){
         b1.addEventListener('click', (event) => {
             let audio = document.getElementById("fx1");
                 audio.play();})     
