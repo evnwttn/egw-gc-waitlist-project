@@ -8,8 +8,6 @@
 //      - A WIN ANIMATION [0%]
 //      - SHOW IF GUESS CORRECT [100% COMPLETE]
 
-
-
 // SPLASH SCREEN 
 
     const splash = document.querySelector(".splash"); // FIRST SPLASH
@@ -41,26 +39,28 @@
         })
 
 
-// START GAME
+// BASE INFORMATION
 
-    const b1 = document.querySelector("#b1"); // crown
-    const b2 = document.querySelector("#b2"); // lizard
-    const b3 = document.querySelector("#b3"); // raven
-    const b4 = document.querySelector("#b4"); // skull
-    const b5 = document.querySelector("#b5"); // scarab
-    const b6 = document.querySelector("#b6"); // pillar 
-    const b7 = document.querySelector("#b7"); // crab
+    const b1 = document.querySelector("#b1"); // CROWN 
+    const b2 = document.querySelector("#b2"); // LIZARD
+    const b3 = document.querySelector("#b3"); // RAVEN
+    const b4 = document.querySelector("#b4"); // SKULL
+    const b5 = document.querySelector("#b5"); // SCARAB
+    const b6 = document.querySelector("#b6"); // PILLAR 
+    const b7 = document.querySelector("#b7"); // CRAB
 
-    let on = false; // game engaged
-    let playerGuess = -1; // # of player guesses
+    let on = false; // GAME ON/OFF
+    let playerGuess = -1; // # OF PLAYER GUESSES
 
-        const sB = document.querySelector(".startButton");
+        const sB = document.querySelector(".startButton"); // START BUTTON
             sB.addEventListener("click", (event) => {
                 startGame();
-                on = true;
             })
 
-    function preGame(){ // button audio-only
+
+// PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
+
+    function preGame(){ 
         b1.addEventListener('click', (event) => {
             let audio = document.getElementById("fx1");
                 audio.play();})     
@@ -83,16 +83,19 @@
             let audio = document.getElementById("fx7");
                 audio.play();})} 
 
+
+// START - ALLOWS PLAYER INPUT
+
 function startGame(){
 
-function shuffle(array) { 
+function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array [j], array[i]];
     }
 }
 
-function runSequence(){
+function runSequence(){ // PLAYS 'A' AUDIO
     for (let i = 0; i < a.length; i++) {
         if ([a[i]] == "b1") {
             setTimeout(function () {
@@ -122,11 +125,12 @@ function runSequence(){
             setTimeout(function () {
                 alert("b7");
             }, i * 3000);
+            on = true;
         }}}
 
 
-window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; //SOLUTION
-let b = []; //USERINPUT
+window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
+let b = []; // USERINPUT
 shuffle(a);
 alert(a);
 runSequence();
@@ -137,8 +141,6 @@ b1.addEventListener('click', (event) => {
     if (on = true) {
     b1.onclick = function(){
         b.push("b1");
-        // b1.classList.remove("b1");
-        // b1.classList.add("b-clicked");
         playerGuess++;
             if (playerGuess == a.indexOf("b1")) {
                 b1.classList.add("b-right");
@@ -154,8 +156,6 @@ b2.addEventListener('click', (event) => {
     if (on = true) {
         b2.onclick = function(){
         b.push("b2");
-        // b2.classList.remove("b2");
-        // b2.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b2")) {
             b2.classList.add("b-right");
@@ -171,8 +171,6 @@ b3.addEventListener('click', (event) => {
     if (on = true) {
     b3.onclick = function(){
         b.push("b3");
-        // b3.classList.remove("b3");
-        // b3.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b3")) {
             b3.classList.add("b-right");
@@ -188,8 +186,6 @@ b4.addEventListener('click', (event) => {
     if (on = true) {
     b4.onclick = function(){
         b.push("b4");
-        // b4.classList.remove("b4");
-        // b4.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b4")) {
             b4.classList.add("b-right");
@@ -205,8 +201,6 @@ b5.addEventListener('click', (event) => {
    if (on = true) {
     b5.onclick = function(){
         b.push("b5");
-        // b5.classList.remove("b5");
-        // b5.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b5")) {
             b5.classList.add("b-right");
@@ -222,8 +216,6 @@ b6.addEventListener('click', (event) => {
     if (on = true) {
     b6.onclick = function(){
         b.push("b6");
-        // b6.classList.remove("b6");
-        // b6.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b6")) {
             b6.classList.add("b-right");
@@ -239,8 +231,6 @@ b7.addEventListener('click', (event) => {
     if (on = true) {
     b7.onclick = function(){
         b.push("b7");
-        // b7.classList.remove("b7");
-        // b7.classList.add("b-clicked");
         playerGuess++;
         if (playerGuess == a.indexOf("b7")) {
             b7.classList.add("b-right");
@@ -250,7 +240,8 @@ b7.addEventListener('click', (event) => {
         compareArrays(a,b);
         }}});
 
-// GAME MECHANICS
+
+// COMPARES USER INPUT TO SOLUTION
 
 function compareArrays (a,b) {
     let result = false;
@@ -273,6 +264,9 @@ function compareArrays (a,b) {
     }
 
 }
+
+
+// GRAVEYARD (R.I.P.)
 
 // function winGame() {
 //     document.getElementById("countdown").innerHTML = "";
