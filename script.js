@@ -93,7 +93,9 @@ function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
 }
 
 function runSequence(){ // PLAYS 'A' AUDIO
-    for (let i = 0; i < a.length; i++) {
+    let on = false;
+    alert("off");
+    for (let i = 0; i < (a.length + 1); i++) {
         if ([a[i]] == "b1") {
             setTimeout(function () {
                 let audio = document.getElementById("fx1");
@@ -129,8 +131,12 @@ function runSequence(){ // PLAYS 'A' AUDIO
                 let audio = document.getElementById("fx7");
                 audio.play(); 
             }, i * 1000);
-            on = true;
         }}}
+
+function allowInput() {
+    on = true;
+    alert("on!");
+}
 
 
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
