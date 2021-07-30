@@ -96,32 +96,39 @@ function runSequence(){ // PLAYS 'A' AUDIO
     for (let i = 0; i < a.length; i++) {
         if ([a[i]] == "b1") {
             setTimeout(function () {
-                alert("b1");
-            }, i * 3000);
+                let audio = document.getElementById("fx1");
+                audio.play();  
+            }, i * 1000);
         } else if (a[i] == "b2") {
             setTimeout(function () {
-                alert("b2");
-            }, i * 3000);
+                let audio = document.getElementById("fx2");
+                audio.play(); 
+            }, i * 1000);
         } else if (a[i] == "b3") {
             setTimeout(function () {
-                alert("b3");
-            }, i * 3000);
+                let audio = document.getElementById("fx3");
+                audio.play(); 
+            }, i * 1000);
         } else if (a[i] == "b4") {
             setTimeout(function () {
-                alert("b4");
-            }, i * 3000);
+                let audio = document.getElementById("fx4");
+                audio.play(); 
+            }, i * 1000);
         } else if (a[i] == "b5") {
             setTimeout(function () {
-                alert("b5");
-            }, i * 3000);
+                let audio = document.getElementById("fx5");
+                audio.play(); 
+            }, i * 1000);
         } else if (a[i] == "b6") {
             setTimeout(function () {
-                alert("b6");
-            }, i * 3000);
+                let audio = document.getElementById("fx6");
+                audio.play(); 
+            }, i * 1000);
         } else if (a[i] == "b7") {
             setTimeout(function () {
-                alert("b7");
-            }, i * 3000);
+                let audio = document.getElementById("fx7");
+                audio.play(); 
+            }, i * 1000);
             on = true;
         }}}
 
