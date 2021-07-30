@@ -83,8 +83,6 @@
 
 // START - ALLOWS PLAYER INPUT
 
-function startGame(){
-
 function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -93,7 +91,6 @@ function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
 }
 
 function runSequence(){ // PLAYS 'A' AUDIO
-    let on = false;
     alert("off");
     for (let i = 0; i < (a.length + 1); i++) {
         if ([a[i]] == "b1") {
@@ -133,11 +130,7 @@ function runSequence(){ // PLAYS 'A' AUDIO
             }, i * 1000);
         }}}
 
-function allowInput() {
-    on = true;
-    alert("on!");
-}
-
+function startGame(){
 
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
 let b = []; // USERINPUT
@@ -148,7 +141,7 @@ runSequence();
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
         audio.play();
-    if (on = true) {
+    if (on == true) {
     b1.onclick = function(){
         b.push("b1");
         playerGuess++;
@@ -163,7 +156,7 @@ b1.addEventListener('click', (event) => {
 b2.addEventListener('click', (event) => {
     let audio = document.getElementById("fx2");
         audio.play();
-    if (on = true) {
+    if (on == true) {
         b2.onclick = function(){
         b.push("b2");
         playerGuess++;
@@ -178,7 +171,7 @@ b2.addEventListener('click', (event) => {
 b3.addEventListener('click', (event) => {
     let audio = document.getElementById("fx3");
         audio.play();
-    if (on = true) {
+    if (on == true) {
     b3.onclick = function(){
         b.push("b3");
         playerGuess++;
@@ -193,7 +186,7 @@ b3.addEventListener('click', (event) => {
 b4.addEventListener('click', (event) => {
     let audio = document.getElementById("fx4");
         audio.play();
-    if (on = true) {
+    if (on == true) {
     b4.onclick = function(){
         b.push("b4");
         playerGuess++;
@@ -208,7 +201,7 @@ b4.addEventListener('click', (event) => {
 b5.addEventListener('click', (event) => {
     let audio = document.getElementById("fx5");
         audio.play();
-   if (on = true) {
+   if (on == true) {
     b5.onclick = function(){
         b.push("b5");
         playerGuess++;
@@ -223,7 +216,7 @@ b5.addEventListener('click', (event) => {
 b6.addEventListener('click', (event) => {
     let audio = document.getElementById("fx6");
         audio.play();
-    if (on = true) {
+    if (on == true) {
     b6.onclick = function(){
         b.push("b6");
         playerGuess++;
@@ -238,7 +231,7 @@ b6.addEventListener('click', (event) => {
 b7.addEventListener('click', (event) => {
     let audio = document.getElementById("fx7");
         audio.play();
-    if (on = true) {
+    if (on == true) {
     b7.onclick = function(){
         b.push("b7");
         playerGuess++;
