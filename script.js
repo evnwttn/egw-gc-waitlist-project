@@ -81,7 +81,6 @@
                 audio.play();})} 
 
 
-// START - ALLOWS PLAYER INPUT
 
 function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
     for (let i = array.length - 1; i > 0; i--) {
@@ -90,63 +89,57 @@ function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
     }
 }
 
+
 function runSequence(){ // PLAYS 'A' AUDIO
     alert("off");
+    let iddqd = 0;
     for (let i = 0; i < (a.length + 1); i++) {
         if ([a[i]] == "b1") {
             setTimeout(function () {
                 let audio = document.getElementById("fx1");
-                audio.play();  
+                audio.play();
+                iddqd++; 
             }, i * 1000);
         } else if (a[i] == "b2") {
             setTimeout(function () {
                 let audio = document.getElementById("fx2");
                 audio.play(); 
+                iddqd++;
             }, i * 1000);
         } else if (a[i] == "b3") {
             setTimeout(function () {
                 let audio = document.getElementById("fx3");
                 audio.play(); 
+                iddqd++;
             }, i * 1000);
         } else if (a[i] == "b4") {
             setTimeout(function () {
                 let audio = document.getElementById("fx4");
                 audio.play(); 
+                iddqd++;
             }, i * 1000);
         } else if (a[i] == "b5") {
             setTimeout(function () {
                 let audio = document.getElementById("fx5");
-                audio.play(); 
+                audio.play();
+                iddqd++; 
             }, i * 1000);
         } else if (a[i] == "b6") {
             setTimeout(function () {
                 let audio = document.getElementById("fx6");
                 audio.play(); 
+                iddqd++;
             }, i * 1000);
         } else if (a[i] == "b7") {
             setTimeout(function () {
                 let audio = document.getElementById("fx7");
                 audio.play(); 
+                iddqd++;
             }, i * 1000);
-        }}}
+        }
+    }}
 
 
-function startGame(){
-
-window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
-let b = []; // USERINPUT
-
-    if (on == false) {
-        shuffle(a).then(function() {
-            runSequence().then(function() {
-                alert("we made it this far!");
-            }
-        )})
-    }
-
-
-shuffle(a);
-alert(a);
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
@@ -276,7 +269,18 @@ function compareArrays (a,b) {
         }}}
     }
 
-}
+    function startGame(){
+        window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
+        let b = []; // USERINPUT
+        shuffle(a);
+        alert(a);
+        runSequence();
+        alertIddqd();
+    }
+
+    function alertIddqd(){
+        alert(iddqd);
+    }
 
 
 // GRAVEYARD (R.I.P.)
