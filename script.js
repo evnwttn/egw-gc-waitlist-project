@@ -130,13 +130,23 @@ function runSequence(){ // PLAYS 'A' AUDIO
             }, i * 1000);
         }}}
 
+
 function startGame(){
 
 window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
 let b = []; // USERINPUT
+
+    if (on == false) {
+        shuffle(a).then(function() {
+            runSequence().then(function() {
+                alert("we made it this far!");
+            }
+        )})
+    }
+
+
 shuffle(a);
 alert(a);
-runSequence();
 
 b1.addEventListener('click', (event) => {
     let audio = document.getElementById("fx1");
