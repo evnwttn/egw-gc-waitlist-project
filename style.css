@@ -213,29 +213,18 @@ h1 {
     background: green;
 }
 
-#winner-none{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background:#0D0D0D;
+.winner{
     opacity: 0%;
-    z-index: -15;
-    color:#E3E3E3;
-    text-align: center;
-    line-height: 90vh;
 }
 
-#winner{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background:#0D0D0D;
-    z-index: 200;
-    color:#E3E3E3;
-    text-align: center;
-    line-height: 90vh;
+.winner-winner{
+    opacity: 100%;
+}
+
+.loser{
+    opacity: 0%;
+}
+
+.loser-loser{
+    opacity: 100%;
 }

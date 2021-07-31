@@ -292,6 +292,19 @@ function startGame(){
         function onTrue() {
             on = true;
         }
+
+
+    // GAME ENDINGS
+
+        function winnerWinner() {
+            const winner = document.querySelector(".winner");
+            game.innerHTML = "";
+        }
+
+        function loserLoser() {
+            const loser = document.querySelector(".loser");
+            game.innerHTML = "";
+        }
             
 }
 
