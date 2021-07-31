@@ -297,10 +297,31 @@ function startGame(){
     const winner = document.querySelector(".winner");
     const loser = document.querySelector(".loser");
 
+    const tB = document.querySelector(".testButton");
+            tB.addEventListener("click", (event) => {
+                winnerWinner();
+            })
+
         function winnerWinner() {
             winner.classList.remove("winner");
             winner.classList.add("winner-winner");
             game.innerHTML = "";
+            setTimeout(function () {
+                 winner.classList.add("ww-1")}, 250);
+            setTimeout(function() {
+                winner.classList.add("ww-2")}, 500);
+            setTimeout(function () {
+                winner.classList.add("ww-3")}, 750);
+            setTimeout(function() {
+               winner.classList.add("ww-4")}, 1000);
+            setTimeout(function() {
+               winner.classList.remove("ww-4")}, 1250);
+            setTimeout(function() {
+            winner.classList.remove("ww-3")}, 1500);
+            setTimeout(function() {
+            winner.classList.remove("ww-2")}, 1750);
+            setTimeout(function() {
+            winner.classList.remove("ww-1")}, 2000);
         }
 
         function loserLoser() {

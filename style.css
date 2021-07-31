@@ -223,9 +223,9 @@ h1 {
     left: 0;
     width: 100%;
     height: 100vh;
+    text-transform: uppercase;
     background:#0D0D0D;
     z-index: 200;
-    color:#E3E3E3;
     text-align: center;
     line-height: 90vh;
     color:#E3E3E3;
@@ -233,6 +233,23 @@ h1 {
     font-weight: bold;
     font-family: 'Yrsa', serif;
     transition: opacity 1s linear;
+    
+}
+
+.ww-1{
+    text-shadow: 100px 10px red;
+}
+
+.ww-2{
+    text-shadow: -100px 10px blue;
+}
+
+.ww-3{
+    text-shadow: -100px -10px green;
+}
+
+.ww-4{
+    text-shadow: 100px -10px purple;
 }
 
 .loser{
