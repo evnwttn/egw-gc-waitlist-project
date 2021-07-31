@@ -29,7 +29,7 @@
             startScreen.classList.remove("startScreen-visible");
             startScreen.classList.add("startScreen");
             preGame();
-            })
+        })
             
         p2.addEventListener("click", (event) => {
             alert("N/A")
@@ -47,6 +47,7 @@
     const b7 = document.querySelector("#b7"); // CRAB
 
     let on = false; // GAME ON/OFF
+    window.tO = 0;
     let playerGuess = -1; // # OF PLAYER GUESSES
 
         const sB = document.querySelector(".startButton"); // START BUTTON
@@ -78,8 +79,8 @@
                 audio.play();})     
         b7.addEventListener('click', (event) => {
             let audio = document.getElementById("fx7");
-                audio.play();})} 
-
+                audio.play();})
+    } 
 
 
 function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
@@ -89,56 +90,65 @@ function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
     }
 }
 
+function turnOn() {
+    if (tO >= 6) {
+        on = true;
+        tO++;
+        alert('yeet');
+    } else {
+        tO++
+        alert(tO);
+    }
+}
 
-function runSequence(){ // PLAYS 'A' AUDIO
+
+function runSequence() { // PLAYS 'A' AUDIO
     alert("off");
-    let iddqd = 0;
     for (let i = 0; i < (a.length + 1); i++) {
         if ([a[i]] == "b1") {
             setTimeout(function () {
                 let audio = document.getElementById("fx1");
                 audio.play();
-                iddqd++; 
+                turnOn(); 
             }, i * 1000);
         } else if (a[i] == "b2") {
             setTimeout(function () {
                 let audio = document.getElementById("fx2");
-                audio.play(); 
-                iddqd++;
+                audio.play();
+                turnOn();  
             }, i * 1000);
         } else if (a[i] == "b3") {
             setTimeout(function () {
                 let audio = document.getElementById("fx3");
                 audio.play(); 
-                iddqd++;
+                turnOn(); 
             }, i * 1000);
         } else if (a[i] == "b4") {
             setTimeout(function () {
                 let audio = document.getElementById("fx4");
                 audio.play(); 
-                iddqd++;
+                turnOn(); 
             }, i * 1000);
         } else if (a[i] == "b5") {
             setTimeout(function () {
                 let audio = document.getElementById("fx5");
                 audio.play();
-                iddqd++; 
+                turnOn(); 
             }, i * 1000);
         } else if (a[i] == "b6") {
             setTimeout(function () {
                 let audio = document.getElementById("fx6");
                 audio.play(); 
-                iddqd++;
+                turnOn(); 
             }, i * 1000);
         } else if (a[i] == "b7") {
             setTimeout(function () {
                 let audio = document.getElementById("fx7");
                 audio.play(); 
-                iddqd++;
+                turnOn(); 
             }, i * 1000);
         }
     }}
-
 
 
 b1.addEventListener('click', (event) => {
@@ -275,13 +285,8 @@ function compareArrays (a,b) {
         shuffle(a);
         alert(a);
         runSequence();
-        alertIddqd();
+        
     }
-
-    function alertIddqd(){
-        alert(iddqd);
-    }
-
 
 // GRAVEYARD (R.I.P.)
 
