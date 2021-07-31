@@ -92,13 +92,11 @@ function startGame(){
     let b = []; // USERINPUT
     const game = document.querySelector("#game");
     shuffle(a);
-    alert(a);
     runSequence();
 
     // PLAYS [A] AUDIO & STARTS GAME 
 
         function runSequence() {
-            alert("off");
             for (let i = 0; i < (a.length + 1); i++) {
                 if ([a[i]] == "b1") {
                     setTimeout(function () {
@@ -261,9 +259,9 @@ function startGame(){
                 && b[5] === a[5]
                 && b[6] === a[6]) {
                     result = true;
-                    alert("yes!");
+                    winnerWinner();
                 } else if ((b.length >= a.length) || (result = false)) {
-                    alert("no!");
+                    loserLoser();
                 }}}
             }
 
@@ -296,13 +294,18 @@ function startGame(){
 
     // GAME ENDINGS
 
+    const winner = document.querySelector(".winner");
+    const loser = document.querySelector(".loser");
+
         function winnerWinner() {
-            const winner = document.querySelector(".winner");
+            winner.classList.remove("winner");
+            winner.classList.add("winner-winner");
             game.innerHTML = "";
         }
 
         function loserLoser() {
-            const loser = document.querySelector(".loser");
+            loser.classList.remove("loser");
+            loser.classList.add("loser-loser");
             game.innerHTML = "";
         }
             
