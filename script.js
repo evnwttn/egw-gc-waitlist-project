@@ -53,6 +53,9 @@
         const sB = document.querySelector(".startButton"); // START BUTTON
             sB.addEventListener("click", (event) => {
                 startGame();
+                setTimeout(function () {
+                    game.style.opacity = "100%";
+                }, 10000);
             })
 
 // PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
@@ -87,6 +90,7 @@
 function startGame(){
     window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
     let b = []; // USERINPUT
+    const game = document.querySelector("#game");
     shuffle(a);
     alert(a);
     runSequence();
