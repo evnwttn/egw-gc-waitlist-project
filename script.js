@@ -81,14 +81,19 @@
                 audio.play();})
     } 
 
-    function startGame(){
-        window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
-        let b = []; // USERINPUT
-        shuffle(a);
-        alert(a);
-        runSequence();
 
-        function runSequence() { // PLAYS 'A' AUDIO
+// START GAME
+
+function startGame(){
+    window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
+    let b = []; // USERINPUT
+    shuffle(a);
+    alert(a);
+    runSequence();
+
+    // PLAYS [A] AUDIO & STARTS GAME 
+
+        function runSequence() {
             alert("off");
             for (let i = 0; i < (a.length + 1); i++) {
                 if ([a[i]] == "b1") {
@@ -136,6 +141,7 @@
                 }
             }}
         
+    // BUTTON FUNCTIONS
         
         b1.addEventListener('click', (event) => {
             let audio = document.getElementById("fx1");
@@ -148,8 +154,7 @@
                         b1.classList.add("b-right");
                     } else {
                         b1.classList.add("b-wrong");
-                    }
-                compareArrays(a,b);
+                    } compareArrays(a,b);
                 }}});
           
         b2.addEventListener('click', (event) => {
@@ -163,8 +168,7 @@
                     b2.classList.add("b-right");
                 } else {
                     b2.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
         
         b3.addEventListener('click', (event) => {
@@ -178,8 +182,7 @@
                     b3.classList.add("b-right");
                 } else {
                     b3.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
         
         b4.addEventListener('click', (event) => {
@@ -193,8 +196,7 @@
                     b4.classList.add("b-right");
                 } else {
                     b4.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
         
         b5.addEventListener('click', (event) => {
@@ -208,8 +210,7 @@
                     b5.classList.add("b-right");
                 } else {
                     b5.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
         
         b6.addEventListener('click', (event) => {
@@ -223,8 +224,7 @@
                     b6.classList.add("b-right");
                 } else {
                     b6.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
         
         b7.addEventListener('click', (event) => {
@@ -238,55 +238,58 @@
                     b7.classList.add("b-right");
                 } else {
                     b7.classList.add("b-wrong");
-                }
-                compareArrays(a,b);
+                } compareArrays(a,b);
                 }}});
 
-                // COMPARES USER INPUT TO SOLUTION
+     // COMPARES USER INPUT TO SOLUTION
 
-function compareArrays (a,b) {
-    let result = false;
-    if (b.length != a.length) {
-        return false;
-    } else {
-        for (let i=0; i<a.length; i++) {
-        if (b[0] === a[0]
-        && b[1] === a[1]
-        && b[2] === a[2]
-        && b[3] === a[3]    
-        && b[4] === a[4]
-        && b[5] === a[5]
-        && b[6] === a[6]) {
-            result = true;
-            alert("yes!")
-        } else if ((b.length >= a.length) || (result = false)) {
-            alert("no!")
-        }}}
-    }
+        function compareArrays (a,b) {
+            let result = false;
+            if (b.length != a.length) {
+                return false;
+            } else {
+                for (let i=0; i<a.length; i++) {
+                if (b[0] === a[0]
+                && b[1] === a[1]
+                && b[2] === a[2]
+                && b[3] === a[3]    
+                && b[4] === a[4]
+                && b[5] === a[5]
+                && b[6] === a[6]) {
+                    result = true;
+                    alert("yes!");
+                } else if ((b.length >= a.length) || (result = false)) {
+                    alert("no!");
+                }}}
+            }
 
-    function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array [j], array[i]];
+    // SHUFFLES [A] RANDOMLY EVERY GAME
+
+        function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array [j], array[i]];
+            }
         }
-    }
     
-    function turnOn() {
-        if (tO >= 6) {
-            onTrue();
-            tO++;
-            alert('yeet');
-        } else {
-            tO++
-            alert(tO);
+    // AFTER RUNNING THROUGH [A] SEQUENCE, GAME IS ON
+
+        function turnOn() {
+            if (tO >= 6) {
+                onTrue();
+                tO++;
+            } else {
+                tO++;
+            }
         }
-    }
-    
-    function onTrue() {
-        on = true;
-    }
         
-    }
+    // GAME IS ON / PLAYER CAN INPUT
+
+        function onTrue() {
+            on = true;
+        }
+            
+}
 
 // GRAVEYARD (R.I.P.)
 
