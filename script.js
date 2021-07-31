@@ -55,7 +55,6 @@
                 startGame();
             })
 
-
 // PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
 
     function preGame(){
@@ -82,182 +81,168 @@
                 audio.play();})
     } 
 
+    function startGame(){
+        window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
+        let b = []; // USERINPUT
+        shuffle(a);
+        alert(a);
+        runSequence();
 
-function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array [j], array[i]];
-    }
-}
-
-function turnOn() {
-    if (tO >= 6) {
-        on = true;
-        tO++;
-        alert('yeet');
-    } else {
-        tO++
-        alert(tO);
-    }
-}
-
-
-function runSequence() { // PLAYS 'A' AUDIO
-    alert("off");
-    for (let i = 0; i < (a.length + 1); i++) {
-        if ([a[i]] == "b1") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx1");
+        function runSequence() { // PLAYS 'A' AUDIO
+            alert("off");
+            for (let i = 0; i < (a.length + 1); i++) {
+                if ([a[i]] == "b1") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx1");
+                        audio.play();
+                        turnOn(); 
+                    }, i * 1000);
+                } else if (a[i] == "b2") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx2");
+                        audio.play();
+                        turnOn();  
+                    }, i * 1000);
+                } else if (a[i] == "b3") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx3");
+                        audio.play(); 
+                        turnOn(); 
+                    }, i * 1000);
+                } else if (a[i] == "b4") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx4");
+                        audio.play(); 
+                        turnOn(); 
+                    }, i * 1000);
+                } else if (a[i] == "b5") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx5");
+                        audio.play();
+                        turnOn(); 
+                    }, i * 1000);
+                } else if (a[i] == "b6") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx6");
+                        audio.play(); 
+                        turnOn(); 
+                    }, i * 1000);
+                } else if (a[i] == "b7") {
+                    setTimeout(function () {
+                        let audio = document.getElementById("fx7");
+                        audio.play(); 
+                        turnOn(); 
+                    }, i * 1000);
+                }
+            }}
+        
+        
+        b1.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx1");
                 audio.play();
-                turnOn(); 
-            }, i * 1000);
-        } else if (a[i] == "b2") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx2");
+            if (on == true) {
+            b1.onclick = function(){
+                b.push("b1");
+                playerGuess++;
+                    if (playerGuess == a.indexOf("b1")) {
+                        b1.classList.add("b-right");
+                    } else {
+                        b1.classList.add("b-wrong");
+                    }
+                compareArrays(a,b);
+                }}});
+          
+        b2.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx2");
                 audio.play();
-                turnOn();  
-            }, i * 1000);
-        } else if (a[i] == "b3") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx3");
-                audio.play(); 
-                turnOn(); 
-            }, i * 1000);
-        } else if (a[i] == "b4") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx4");
-                audio.play(); 
-                turnOn(); 
-            }, i * 1000);
-        } else if (a[i] == "b5") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx5");
+            if (on == true) {
+                b2.onclick = function(){
+                b.push("b2");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b2")) {
+                    b2.classList.add("b-right");
+                } else {
+                    b2.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
+        
+        b3.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx3");
                 audio.play();
-                turnOn(); 
-            }, i * 1000);
-        } else if (a[i] == "b6") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx6");
-                audio.play(); 
-                turnOn(); 
-            }, i * 1000);
-        } else if (a[i] == "b7") {
-            setTimeout(function () {
-                let audio = document.getElementById("fx7");
-                audio.play(); 
-                turnOn(); 
-            }, i * 1000);
-        }
-    }}
+            if (on == true) {
+            b3.onclick = function(){
+                b.push("b3");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b3")) {
+                    b3.classList.add("b-right");
+                } else {
+                    b3.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
+        
+        b4.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx4");
+                audio.play();
+            if (on == true) {
+            b4.onclick = function(){
+                b.push("b4");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b4")) {
+                    b4.classList.add("b-right");
+                } else {
+                    b4.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
+        
+        b5.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx5");
+                audio.play();
+           if (on == true) {
+            b5.onclick = function(){
+                b.push("b5");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b5")) {
+                    b5.classList.add("b-right");
+                } else {
+                    b5.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
+        
+        b6.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx6");
+                audio.play();
+            if (on == true) {
+            b6.onclick = function(){
+                b.push("b6");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b6")) {
+                    b6.classList.add("b-right");
+                } else {
+                    b6.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
+        
+        b7.addEventListener('click', (event) => {
+            let audio = document.getElementById("fx7");
+                audio.play();
+            if (on == true) {
+            b7.onclick = function(){
+                b.push("b7");
+                playerGuess++;
+                if (playerGuess == a.indexOf("b7")) {
+                    b7.classList.add("b-right");
+                } else {
+                    b7.classList.add("b-wrong");
+                }
+                compareArrays(a,b);
+                }}});
 
-
-b1.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx1");
-        audio.play();
-    if (on == true) {
-    b1.onclick = function(){
-        b.push("b1");
-        playerGuess++;
-            if (playerGuess == a.indexOf("b1")) {
-                b1.classList.add("b-right");
-            } else {
-                b1.classList.add("b-wrong");
-            }
-        compareArrays(a,b);
-        }}});
-  
-b2.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx2");
-        audio.play();
-    if (on == true) {
-        b2.onclick = function(){
-        b.push("b2");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b2")) {
-            b2.classList.add("b-right");
-        } else {
-            b2.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-b3.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx3");
-        audio.play();
-    if (on == true) {
-    b3.onclick = function(){
-        b.push("b3");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b3")) {
-            b3.classList.add("b-right");
-        } else {
-            b3.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-b4.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx4");
-        audio.play();
-    if (on == true) {
-    b4.onclick = function(){
-        b.push("b4");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b4")) {
-            b4.classList.add("b-right");
-        } else {
-            b4.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-b5.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx5");
-        audio.play();
-   if (on == true) {
-    b5.onclick = function(){
-        b.push("b5");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b5")) {
-            b5.classList.add("b-right");
-        } else {
-            b5.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-b6.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx6");
-        audio.play();
-    if (on == true) {
-    b6.onclick = function(){
-        b.push("b6");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b6")) {
-            b6.classList.add("b-right");
-        } else {
-            b6.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-b7.addEventListener('click', (event) => {
-    let audio = document.getElementById("fx7");
-        audio.play();
-    if (on == true) {
-    b7.onclick = function(){
-        b.push("b7");
-        playerGuess++;
-        if (playerGuess == a.indexOf("b7")) {
-            b7.classList.add("b-right");
-        } else {
-            b7.classList.add("b-wrong");
-        }
-        compareArrays(a,b);
-        }}});
-
-
-// COMPARES USER INPUT TO SOLUTION
+                // COMPARES USER INPUT TO SOLUTION
 
 function compareArrays (a,b) {
     let result = false;
@@ -279,12 +264,27 @@ function compareArrays (a,b) {
         }}}
     }
 
-    function startGame(){
-        window.a = ["b1", "b2", "b3", "b4", "b5", "b6", "b7"]; // SOLUTION
-        let b = []; // USERINPUT
-        shuffle(a);
-        alert(a);
-        runSequence();
+    function shuffle(array) { // SHUFFLES 'A' ARRAY RANDOMLY
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array [j], array[i]];
+        }
+    }
+    
+    function turnOn() {
+        if (tO >= 6) {
+            onTrue();
+            tO++;
+            alert('yeet');
+        } else {
+            tO++
+            alert(tO);
+        }
+    }
+    
+    function onTrue() {
+        on = true;
+    }
         
     }
 
