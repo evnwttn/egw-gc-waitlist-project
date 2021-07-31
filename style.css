@@ -196,7 +196,6 @@ h1 {
     font-size: 1.5em; 
     font-weight: bold;
     font-family: 'Yrsa', serif;
-    color:#E3E3E3;
     text-align: center;
     line-height: 96vh;
 }
@@ -219,6 +218,21 @@ h1 {
 
 .winner-winner{
     opacity: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:#0D0D0D;
+    z-index: 200;
+    color:#E3E3E3;
+    text-align: center;
+    line-height: 90vh;
+    color:#E3E3E3;
+    font-size: 2em; 
+    font-weight: bold;
+    font-family: 'Yrsa', serif;
+    transition: opacity 1s linear;
 }
 
 .loser{
