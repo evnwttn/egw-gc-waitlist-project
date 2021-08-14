@@ -42,7 +42,7 @@
                 startGame();
                 setTimeout(function () {
                     game.style.opacity = "100%";
-                }, 7250);
+                }, 14000);
             })
 
 // PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
@@ -90,43 +90,43 @@ function startGame(){
                         let audio = document.getElementById("fx1");
                         audio.play();
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b2") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx2");
                         audio.play();
                         turnOn();  
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b3") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx3");
                         audio.play(); 
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b4") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx4");
                         audio.play(); 
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b5") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx5");
                         audio.play();
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b6") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx6");
                         audio.play(); 
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 } else if (a[i] == "b7") {
                     setTimeout(function () {
                         let audio = document.getElementById("fx7");
                         audio.play(); 
                         turnOn(); 
-                    }, i * 1000);
+                    }, i * 2000);
                 }
             }}
         
@@ -307,9 +307,10 @@ function startGame(){
         }
 
         function loserLoser() {
-            loser.classList.remove("loser");
-            loser.classList.add("loser-loser");
             game.innerHTML = "";
+            setTimeout(function(){
+                window.location.reload(1);
+             }, 1000);
         }
             
 }
@@ -322,9 +323,7 @@ function startGame(){
 //     }
 // ;
 
-// function loseGame() {
-//     document.getElementById("game").classList.add("b-clicked");
-//     document.getElementById("countdown").classList.add("b-clicked");
+// function loserloser() {
 //     setTimeout(function(){
 //         window.location.reload(1);
 //      }, 2500);
