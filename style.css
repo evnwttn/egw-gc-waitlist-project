@@ -1,261 +1,246 @@
-/* 
-COLOUR PALETTE
-
-#E3E3E3 - OFF WHITE
-#9C9C9C - SILVER
-#636363 - DARK SILVER
-#2E2E2E - GREY
-#1A1A1A - DARK GREY
-#0D0D0D - OFF BLACK
-
-*/
-
-html { 
-    background-color: #0D0D0D;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: fixed;
-  }
+html {
+  background-color: #0d0d0d;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+}
 
 body {
-    font-family: 'Yrsa', serif;
+  font-family: "Yrsa", serif;
 }
 
 #container {
-	width: 100%;
-    margin-left: 38%;
-	margin-top: 16%;
-    margin-right: 10%;
-    }
+  width: 100%;
+  margin-left: 38%;
+  margin-top: 16%;
+  margin-right: 10%;
+}
 
 p {
-    color: #E3E3E3;
+  color: #e3e3e3;
 }
 
 p2 {
-    color: #9C9C9C;
+  color: #9c9c9c;
 }
 
 #game {
-    margin-top: 33%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 50%;
+  margin-top: 33%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 50%;
 }
 
 .inline-block {
-    display: inline-block;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px; 
- }
+  display: inline-block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
 
 h1 {
-    color: #636363;
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #636363;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.startScreen{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #0D0D0D;
-    opacity: 0;
-    z-index: -10;
-    color: #E3E3E3;
-    text-align: center;
-    line-height: 90vh;
+.startScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0d0d0d;
+  opacity: 0;
+  z-index: -10;
+  color: #e3e3e3;
+  text-align: center;
+  line-height: 90vh;
 }
 
-.startScreen-visible{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #0D0D0D;
-    opacity: 100%;
-    z-index: 200;
-    color: #E3E3E3;
-    text-align: center;
-    line-height: 90vh;
+.startScreen-visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0d0d0d;
+  opacity: 100%;
+  z-index: 200;
+  color: #e3e3e3;
+  text-align: center;
+  line-height: 90vh;
 }
 
-.splash{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background:#0D0D0D;
-    z-index: 200;
-    color:#E3E3E3;
-    text-align: center;
-    line-height: 90vh;
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0d0d0d;
+  z-index: 200;
+  color: #e3e3e3;
+  text-align: center;
+  line-height: 90vh;
 }
 
-.splash.display-none{
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background:#0D0D0D;
-    z-index: -10;
-    color:#E3E3E3;
-    text-align: center;
-    line-height: 90vh;
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0d0d0d;
+  z-index: -10;
+  color: #e3e3e3;
+  text-align: center;
+  line-height: 90vh;
 }
 
-.cdclr1{
-    color: #2E2E2E;
+.cdclr1 {
+  color: #2e2e2e;
 }
 
-
-@keyframes fadeIn{
-    to{
-        opacity: 1;
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-.fade-in{
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 /* BUTTON FX */
 
 .reset:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b-clicked {
-    opacity: 0;
-    transition: opacity 1s;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .b1:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b2:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b3:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b4:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b5:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b6:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b7:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
-
 .p1 {
-    background: none;
-    border: none;
-    color:#E3E3E3;
-    font-size: 1.5em; 
-    font-weight: bold;
-    font-family: 'Yrsa', serif;
-    color:#E3E3E3;
-    text-align: center;
-    line-height: 96vh;
+  background: none;
+  border: none;
+  color: #e3e3e3;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Yrsa", serif;
+  color: #e3e3e3;
+  text-align: center;
+  line-height: 96vh;
 }
 
 .p1:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .p2 {
-    background: none;
-    border: none;
-    color:#E3E3E3;
-    font-size: 1.5em; 
-    font-weight: bold;
-    font-family: 'Yrsa', serif;
-    text-align: center;
-    line-height: 96vh;
+  background: none;
+  border: none;
+  color: #e3e3e3;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Yrsa", serif;
+  text-align: center;
+  line-height: 96vh;
 }
 
 .p2:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .b-wrong {
-    background: red;
+  background: red;
 }
 
 .b-right {
-    background: green;
+  background: green;
 }
 
-.winner{
-    opacity: 0%;
+.winner {
+  opacity: 0%;
 }
 
-.winner-winner{
-    opacity: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    text-transform: uppercase;
-    background:#0D0D0D;
-    z-index: 200;
-    text-align: center;
-    line-height: 90vh;
-    color:#E3E3E3;
-    font-size: 2em; 
-    font-weight: bold;
-    font-family: 'Yrsa', serif;
-    transition: opacity 1s linear;
-    
+.winner-winner {
+  opacity: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-transform: uppercase;
+  background: #0d0d0d;
+  z-index: 200;
+  text-align: center;
+  line-height: 90vh;
+  color: #e3e3e3;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Yrsa", serif;
+  transition: opacity 1s linear;
 }
 
-.ww-1{
-    text-shadow: 100px 10px red;
+.ww-1 {
+  text-shadow: 100px 10px red;
 }
 
-.ww-2{
-    text-shadow: -100px 10px blue;
+.ww-2 {
+  text-shadow: -100px 10px blue;
 }
 
-.ww-3{
-    text-shadow: -100px -10px green;
+.ww-3 {
+  text-shadow: -100px -10px green;
 }
 
-.ww-4{
-    text-shadow: 100px -10px purple;
+.ww-4 {
+  text-shadow: 100px -10px purple;
 }
 
-.loser{
-    opacity: 0%;
+.loser {
+  opacity: 0%;
 }
 
-.loser-loser{
-    opacity: 100%;
+.loser-loser {
+  opacity: 100%;
 }

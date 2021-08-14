@@ -1,17 +1,9 @@
-// TO DO
-//      - PLAYS THE SOUNDS ASSOCIATED WITH A, PLAYERS WILL MEMORIZE [75%]
-//      - RE-DO PIANO SOUNDS & TIME EACH FOR THE PLAYBACK FEATURE UNDER SEQUENCE. ALSO NEED FADEOUTS. [25%]
-//      - ADDING A HEAD TO HEAD FUNCTION [0%]
-//      - A DESCRIPTION OF WHAT THE GAME IS [25%]
-//      - A WIN ANIMATION [0%]
-
 // SPLASH SCREEN 
 
     const splash = document.querySelector(".splash"); // FIRST SPLASH
     const splash2 = document.querySelector(".splash2"); // SECOND SPLASH
     const startScreen = document.querySelector(".startScreen"); // PLAYER SELECTOR SCREEN
     const p1 = document.querySelector(".p1"); // ONE PLAYER
-    const p2 = document.querySelector(".p2"); // TWO PLAYER
 
         splash.addEventListener("click", (event) => {
             splash.classList.add("display-none");
@@ -31,11 +23,6 @@
             preGame();
         })
             
-        p2.addEventListener("click", (event) => {
-            alert("N/A")
-        })
-
-
 // BASE INFORMATION
 
     const b1 = document.querySelector("#b1"); // CROWN 
