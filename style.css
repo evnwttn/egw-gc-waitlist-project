@@ -35,6 +35,18 @@ p2 {
   opacity: 50%;
 }
 
+.startButton {
+  background: none;
+  border: 2px solid #9c9c9c;
+  color: #e3e3e3;
+  font-family: "Yrsa", serif;
+  font-size: 125%;
+  text-transform: uppercase;
+  position: fixed;
+  margin-left: 46.85%;
+  margin-top: -5%;
+}
+
 .inline-block {
   display: inline-block;
   border-radius: 50%;

@@ -42,7 +42,7 @@
                 startGame();
                 setTimeout(function () {
                     game.style.opacity = "100%";
-                }, 10000);
+                }, 7250);
             })
 
 // PRE-START - ALLOWS PLAYER TO HEAR SOUNDS
@@ -283,11 +283,6 @@ function startGame(){
 
     const winner = document.querySelector(".winner");
     const loser = document.querySelector(".loser");
-
-    const tB = document.querySelector(".testButton");
-            tB.addEventListener("click", (event) => {
-                winnerWinner();
-            })
 
         function winnerWinner() {
             winner.classList.remove("winner");
